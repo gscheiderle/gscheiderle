@@ -24,9 +24,9 @@
 		
 <?php  
         
-/*$form="<form method='POST' action='https://www.gscheiderle.de/einloggen.php?kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>"; */
+/*$form="<form method='POST' action='http://localhost/einloggen.php?kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>"; */
         
-           $form="<form method='POST' action='https://www.gscheiderle.de/einloggen.php?kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>";
+           $form="<form method='POST' action='http://localhost/einloggen.php?kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>";
         
 	
 echo $form;
@@ -150,8 +150,8 @@ include("intern/mysql_connect_gscheiderle.php");
         {
     
          
-        // echo "<a href='https://www.gscheiderle.de/kasse/zahlung_abschliessen.php'><h2>Zur Kasse</a>";
-        echo "<a href='https://www.gscheiderle.de/kasse/zahlung_abschliessen.php'><h2>Zur Kasse</a>";
+        // echo "<a href='http://localhost/kasse/zahlung_abschliessen.php'><h2>Zur Kasse</a>";
+        echo "<a href='http://localhost/kasse/zahlung_abschliessen.php'><h2>Zur Kasse</a>";
         
         }  
         

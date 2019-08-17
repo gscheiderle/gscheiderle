@@ -108,11 +108,11 @@ echo "
      </td></tr>
 	 
 	         <tr><td colspan='2' bgcolor='yellow'> <br>&nbsp;
-      <a href=\"https://www.gscheiderle.de/kasse/rechnung_abfrage.php\" target=\"_blanc\"\"><font style=\" size: 48pt; color: #000000\">Rechnung selectieren</a><br><br>
+      <a href=\"http://localhost/kasse/rechnung_abfrage.php\" target=\"_blanc\"\"><font style=\" size: 48pt; color: #000000\">Rechnung selectieren</a><br><br>
      </td></tr>
 	 
 	 	         <tr><td colspan='2' bgcolor='yellow'> <br>&nbsp;
-      <a href=\"https://www.gscheiderle.de/kasse/abrechnung_mitarbeiter.php\" target=\"_blanc\"\"><font style=\" size: 48pt; color: #000000\">Abrechnung Mitarbeiter</a><br><br>
+      <a href=\"http://localhost/kasse/abrechnung_mitarbeiter.php\" target=\"_blanc\"\"><font style=\" size: 48pt; color: #000000\">Abrechnung Mitarbeiter</a><br><br>
      </td></tr>
      
 

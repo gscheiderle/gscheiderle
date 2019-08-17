@@ -21,11 +21,11 @@ while ( $result_tips = mysqli_fetch_array( $select_tips, MYSQLI_BOTH ) ) {
     
 $freigabe_link=$result_tips['titel'];
 	
-$freigabelink[]=("<a href='https://www.gscheiderle.de/tcpdf/examples/pdf_tips_gscheiderle.php?renr=$_GET[re_nr]&tip_nr=$result_links[tip_nr]' target='_blanc'>&nbsp;$freigabe_link&nbsp;</a>");	
+$freigabelink[]=("<a href='http://localhost/tcpdf/examples/pdf_tips_gscheiderle.php?renr=$_GET[re_nr]&tip_nr=$result_links[tip_nr]' target='_blanc'>&nbsp;$freigabe_link&nbsp;</a>");	
 	
 	
 
-/*echo "<a href='https://www.gscheiderle.de/tcpdf/examples/pdf_tips_gscheiderle.php?renr=$_GET[re_nr]&tip_nr=$result_links[tip_nr]' target='_blanc'>$font&nbsp;$freigabe_link&nbsp;</font></a>";
+/*echo "<a href='http://localhost/tcpdf/examples/pdf_tips_gscheiderle.php?renr=$_GET[re_nr]&tip_nr=$result_links[tip_nr]' target='_blanc'>$font&nbsp;$freigabe_link&nbsp;</font></a>";
 echo "<br>";  */  
     
 

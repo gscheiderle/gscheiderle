@@ -17,11 +17,11 @@
 </head>
 	<body>
 		
-<?php  $form="<form method='POST' action='https://www.gscheiderle.de/einloggen.php?kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>"; 
+<?php  $form="<form method='POST' action='http://localhost/einloggen.php?kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>"; 
         
        
      if ( ( $_POST['password_check'] == "password_check" ) && ( $passwortcheck == TRUE ) ) {
-     $form="<form method='POST' action='https://www.gscheiderle.de/kasse/zahlung_abschliessen.php?kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>"; 
+     $form="<form method='POST' action='http://localhost/kasse/zahlung_abschliessen.php?kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>"; 
  }         
 	  
 	
@@ -65,7 +65,7 @@ Am Mittelberg 2<br>
 69439 Zwingenberg<br>
 Telefon +49 (0)6263 428998
 E-Mail: usnh2000@yahoo.de
-Website: https://www.gscheiderle.de/
+Website: http://localhost/
     
     
  <br><br><br>
@@ -80,7 +80,7 @@ Am Mittelberg 2<br>
 69439 Zwingenberg<br>
 Telefon +49 (0)6263 428998
 E-Mail: usnh2000@yahoo.de
-Website: https://www.gscheiderle.de/
+Website: http://localhost/
 
 <b>Wir respektieren Ihre Daten!</b><br><br>
 Wir freuen uns &uuml;ber Ihr Interesse an unserem Internetauftritt. Das Vertrauen aller Besucher und Kunden, die Sicherheit Ihrer Daten und der Schutz Ihrer Privatsph&auml;re sind f&uuml;r uns von zentraler Bedeutung. Ihre personenbezogenen Daten werden von uns daher gem&auml;&szlig; den g&uuml;ltigen gesetzlichen Datenschutzvorschriften und dieser Datenschutzerkl&auml;rung behandelt. Personenbezogene Daten sind Informationen, die dazu genutzt werden k&ouml;nnen, um Ihre Identit&auml;t zu erfahren, wie beispielsweise Ihr richtiger Name, Ihre Adresse oder Ihre Telefonnummer. <br>

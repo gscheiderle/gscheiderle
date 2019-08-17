@@ -237,8 +237,8 @@ echo "
    <input type='hidden' name='invoice' value='$neuerenr' />
    <input type='hidden' name='cmd' value='_cart' />
    
-   <input type='hidden' name='cancel_return' value='https://www.gscheiderle.de/kasse/cancel_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />
-   <input type='hidden' name='return' value='https://www.gscheiderle.de/kasse/danke_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />
+   <input type='hidden' name='cancel_return' value='http://localhost/kasse/cancel_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />
+   <input type='hidden' name='return' value='http://localhost/kasse/danke_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />
    
    <input type='hidden' name='rm' value='2' />
    <input type='hidden' name='tax_cart' value='$mehrwert_steuer' />

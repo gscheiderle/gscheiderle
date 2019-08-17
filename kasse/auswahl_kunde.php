@@ -59,8 +59,8 @@ echo "<div class='article'>";
     
     <td align="left" valign="middle">
             
-        <a href="https://www.gscheiderle.de/einloggen.php" style="text-decoration:none">
-        <img src="https://www.gscheiderle.de/images_system/knopf_gross.png" style="width:80px; height: 80px"></a></h1>
+        <a href="http://localhost/einloggen.php" style="text-decoration:none">
+        <img src="http://localhost/images_system/knopf_gross.png" style="width:80px; height: 80px"></a></h1>
     </td>
 </tr>
     
@@ -78,8 +78,8 @@ echo "<div class='article'>";
     </td>
         
     <td align="left" valign="middle">
-         <a href="https://www.gscheiderle.de/kasse/index.php" style="text-decoration:none">
-         <img src="https://www.gscheiderle.de/images_system/knopf_gross.png" style="width:80px; height: 80px"></a></h1>
+         <a href="http://localhost/kasse/index.php" style="text-decoration:none">
+         <img src="http://localhost/images_system/knopf_gross.png" style="width:80px; height: 80px"></a></h1>
     </td>
 </tr>
     
