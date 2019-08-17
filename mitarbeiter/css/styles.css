@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Für links-oben,php */
+
+.button button {
+	width: 300px;
+	padding: 5;
+	height: 40px;
+	max-width: 400px;
+	color: #000000;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", "Helvetica", "Arial", sans-serif;
+	font-style: normal;
+	font-size: 18px;
+	text-decoration: none;
+	text-align: center;
+	text-transform: lowercase;
+	border-radius: 10px;
+	background-color: #ABA9C4;
+}
+
+.button  h1  {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", "Helvetica", "Arial", sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	text-align: left;
+	text-decoration: none;
+	color: #000;
+	background-color: #ED1014;
+	line-height: 0px;
+	text-transform: uppercase;
+}
+
+
+.button select {
+	width: 200px;
+	height: 40px;
+	max-width: 400px;
+	color: #000000;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", "Helvetica", "Arial", sans-serif;
+	font-style: normal;
+	font-size: 24px;
+	background-color: #ABA9C4;
+	border-radius: 5px;
+}
+
+.button input {
+	size: 350px;
+	height: 35px;
+	color: #000000;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", "Helvetica", "Arial", sans-serif;
+	font-style: normal;
+	font-size: 24px;
+	background-color: #DCDAE9;
+	border-radius: 5px;
+}
+
+.button  h2 a {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", "Helvetica", "Arial", sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	text-align: left;
+	text-decoration: none;
+	color: #000;
+	line-height: normal;
+}
+
+
+
+
+
+
+.button_gross button {
+	width: 450px;
+	padding: 5;
+	height: 50px;
+	max-width: 400px;
+	color: #000000;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", "Helvetica", "Arial", sans-serif;
+	font-style: normal;
+	font-size: 24px;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	border-radius: 10px;
+	background-color: #7EA276;
+}
+
+
+
+
+
+
+
+.links_oben {
+	background-color: #ED1014;	
+}
+
+.links_oben  h1 a {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", "Helvetica", "Arial", sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	text-align: center;
+	text-decoration: none;
+	color: #FFFFFF;
+	background-color: #ED1014;
+	line-height: 0px;
+}
+
