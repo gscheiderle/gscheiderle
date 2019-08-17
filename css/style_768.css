@@ -1,0 +1,396 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, html * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+.row:after {
+    content: "";
+    display: table;
+}
+.row:after {
+    clear: both;
+}
+
+
+
+.wrapper {
+	width: 95%;
+	margin-right: auto;
+	margin-left: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+	min-height: 100vh;
+	grid-row-gap: 3em;
+	color: #BBB6B6;
+	
+}
+
+
+
+
+.header {
+	grid-column: 1 / span 3;
+	grid-row: 1;
+	height: auto;
+	background-color: #1C1ADD;
+}
+
+.header h1 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #ECE772;
+	font-weight: bold;
+	text-align: center;
+	font-size: 5em;
+	line-height: normal;
+}
+
+.header h2 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #ED1014;
+	font-weight: 200;
+	text-align: center;
+	font-size: 0.5em;
+}
+
+
+.nav {
+	grid-column: 1 / span 3;
+	grid-row: 2;
+	height: 24em;
+	background-color: yellow;
+    color: #000;
+	text-align: left;
+	text-decoration: none;
+    display: block;
+}
+
+.nav h1 a {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #000;
+	font-weight: bold;
+	font-size: 1.4em;
+    line-height: 1.7em;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: left;
+	display: block;
+}
+
+
+
+
+.article_rubrik {
+	grid-column: 1 / span 3;
+	grid-row: 3;
+	height: auto;
+	background-color: #FFFFFF;
+	padding-right: auto;
+	padding-left: auto;
+	margin-right: 10px;	
+}
+
+.article_rubrik h1 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #85849E;
+	font-weight: bold;
+	text-align: left;
+	font-size: 2em;
+}
+
+.article_rubrik h1 a {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #85849E;
+	font-weight: bold;
+	text-align: left;
+	font-size: 1,5em;
+	text-decoration: none;
+}
+
+.article_rubrik h11 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #ED1014;
+	font-weight: bold;
+	text-align: left;
+	font-size: 3em;
+}
+
+.article_rubrik h2 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #1C1ADD;
+	font-weight: 300;
+	text-align: right;
+	font-size: 1.5em;
+}
+
+.article_rubrik h3 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #1C1ADD;
+	background-color: #ECE772;
+	font-weight: 200;
+	text-align: left;
+	font-size: 1em;
+}
+
+.article_rubrik table {
+	width: 100%;
+	margin: 10px;
+	padding: 0;
+	background-color: #FFF;
+}
+
+.article_rubrik td {
+	width: 50%;
+	padding: 15px;
+	border-radius: 20px 0 0;
+	border: thick solid #F4EE56;
+	margin: 10px;
+	color: #000000;
+	background-color: #D0CFE3;
+}
+
+
+
+
+
+.article_tip_auswahl {
+	grid-column: 1 / span 2;
+	grid-row: 3;
+	height: auto;
+	background-color: #FFFFFF;
+	padding-right: auto;
+	padding-left: auto;
+	margin-right: 10px;	
+}
+
+
+.article_tip_auswahl h1 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #85849E;
+	font-weight: bold;
+	text-align: left;
+	font-size: 2em;
+}
+
+.article_tip_auswahl h1 a {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #85849E;
+	font-weight: bold;
+	text-align: left;
+	font-size: 1,5em;
+	text-decoration: none;
+}
+
+.article_tip_auswahl h11 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #ED1014;
+	font-weight: bold;
+	text-align: left;
+	font-size: 3em;
+}
+
+.article_tip_auswahl h2 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #1C1ADD;
+	font-weight: 300;
+	text-align: right;
+	font-size: 1.5em;
+}
+
+.article_tip_auswahl h3 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #1C1ADD;
+	background-color: #ECE772;
+	font-weight: 200;
+	text-align: left;
+	font-size: 1em;
+}
+
+.article_tip_auswahl table {
+	width: 100%;
+	margin: 10px;
+	padding: 0;
+	background-color: #FFF;
+}
+
+.article_tip_auswahl td {
+	width: 50%;
+	padding: 15px;
+	border-radius: 20px 0 0;
+	border: thick solid #F4EE56;
+	margin: 10px;
+	color: #000000;
+	background-color: #D0CFE3;
+}
+
+
+
+
+.ansage {
+	grid-column: 1 / span 6;
+	grid-row: 3;
+	height: 39em;
+	padding-right: auto;
+	padding-left: auto;
+	background-color: #ABA9C4;
+}
+
+.ansage h1 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #1C1ADD;
+	font-weight: 50;
+	text-align: center;
+	font-size: 8em;
+	line-height: 1.2em;
+}
+
+
+
+
+
+
+
+.article {
+	grid-column: 1 / span 6;
+	grid-row: 3;
+	height: 150em;
+	background-color: #fff;
+	margin_top: 10px;
+	margin_bottom: 10em;
+	padding-top: auto;
+	padding-right: auto;
+	padding-bottom: auto;
+	border-radius: 18px;
+	padding-left: auto;
+}
+
+.article h1 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #1614CB;
+	font-weight: bold;
+	text-align: left;
+	font-size: 4em;
+}
+
+.article h11 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #ED1014;
+	font-weight: bold;
+	text-align: left;
+	font-size: 4em;
+}
+
+.article h2 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #1614CB;
+	font-weight: 300;
+	text-align: left;
+	font-size: 3em;
+}
+
+.article h3 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #1C1ADD;
+	background-color: #ECE772;
+	font-weight: 300;
+	text-align: left;
+	font-size: 3em;
+}
+
+.article h4 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #000;
+	font-size: 1.8em;
+    font-weight: 300;
+	text-decoration: none;
+	text-align: left;
+}
+
+
+.article tr td {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #000;
+	font-size: 1.8em;
+    font-weight: 300;
+	text-decoration: none;
+	text-align: left;
+}
+
+
+.article table {
+    
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;  
+}
+
+.aside {
+	grid-column: 1 / span 6;
+	grid-row: 4;
+	height: 98em;
+	background-color: #fff ;
+	margin_top: 10px;
+	margin_bottom: 10em;
+	padding-top: auto;
+	padding-right: auto;
+	padding-bottom: auto;
+	padding-left: auto;
+}
+
+.aside h1 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #1614CB;
+	font-weight: bold;
+	text-align: center;
+	font-size: 4em;
+	line-height: normal;
+}
+
+.aside h2 ul li a{
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #1C1ADD;
+	font-weight: 300;
+	text-align: left;
+	font-size: 3em;
+	text-transform: uppercase;
+	text-decoration: none;
+	line-height: normal;
+}
+
+.aside h3 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #1C1ADD;
+	background-color: #ECE772;
+	font-weight: 300;
+	text-align: left;
+	font-size: 3em;
+}
+
+
+
+
+
+
+
+
+.footer {
+	grid-column: 1 / span 3;
+	grid-row: 6;
+	height: 13em;
+	background-color: #ABA9C4;
+	padding-right: auto;
+	padding-left: auto;
+	padding: 10px;
+}
+
+.footer h1 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #ED1014;
+	font-weight: bold;
+	text-align: center;
+	font-size: 2.5em;
+}

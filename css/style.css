@@ -1,0 +1,366 @@
+@charset "utf-8";
+/* CSS Document */
+
+.wrapper {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto auto auto auto;
+	min-height: 100vh;
+	grid-column-gap: 3em;
+	grid-row-gap: 3em;
+	background-color: #EFEEFC;
+}
+
+
+
+.header {
+	grid-column: 2 / span 4;
+	grid-row: 1;
+	height: 14em;
+	background-color: #1C1ADD;
+	padding-right: auto;
+	padding-left: auto;
+}
+
+.header h1 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #ECE772;
+	font-weight: bold;
+	text-align: center;
+	font-size: 4em;
+}
+
+.header h2 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #ED1014;
+	font-weight: 200;
+	text-align: center;
+	font-size: 0.5em;
+}
+
+
+/* Header tip_auswahl, Cart ///////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+.header_cart {
+	grid-column: 1 / span 6;
+	grid-row: 1;
+	height: 14em;
+	background-color: #1C1ADD;
+	padding-right: auto;
+	padding-left: auto;
+}
+
+.header_cart h1 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #ECE772;
+	font-weight: bold;
+	text-align: center;
+	font-size: 4em;
+}
+
+.header_cart h2 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #ED1014;
+	font-weight: 200;
+	text-align: center;
+	font-size: 0.5em;
+}
+
+
+
+
+
+
+
+
+
+
+/* ende Header tip_auswahl, Cart ///////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+.ansage {
+	grid-column: 1 / span 6;
+	grid-row: 2;
+	height: 25em;
+	background-color: #ABA9C4;
+	padding: 10px;
+}
+
+.ansage h1 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #1C1ADD;
+	font-weight: 500;
+	text-align: center;
+	font-size: 7em;
+	line-height: 1em;
+	letter-spacing: 0px;
+}
+
+.article_titel {
+	grid-column: 2 / span 3;
+	grid-row: 3;
+	height: auto;
+	background-color: #fff;
+	margin_bottom: 1em;
+	padding-right: auto;
+	padding: 10px;
+	
+}
+
+.article_titel h1 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #1614CB;
+	font-weight: bold;
+	text-align: left;
+	font-size: 2.3em;
+}
+
+.article_titel h11 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #ED1014;
+	font-weight: bold;
+	text-align: left;
+	font-size: 3em;
+}
+
+.article_titel h2 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #1C1ADD;
+	font-weight: 300;
+	text-align: left;
+	font-size: 2em;
+}
+
+.article_titel h3 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #1C1ADD;
+	background-color: #ECE772;
+	font-weight: 200;
+	text-align: left;
+	font-size: 2em;
+}
+
+
+
+
+
+
+.article {
+	grid-column: 2 / span 3;
+	grid-row: 3;
+	height: 77em;
+	background-color: #fff;
+	margin_bottom: 1em;
+	padding-right: auto;
+	padding: 10px;
+	
+}
+
+.article h1 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #1614CB;
+	font-weight: bold;
+	text-align: left;
+	font-size: 3em;
+}
+
+.article h11 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #ED1014;
+	font-weight: bold;
+	text-align: left;
+	font-size: 2.5em;
+}
+
+.article h2 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #1C1ADD;
+	font-weight: 300;
+	text-align: left;
+	font-size: 2em;
+}
+
+.article h3 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #1C1ADD;
+	background-color: #ECE772;
+	font-weight: 200;
+	text-align: left;
+	font-size: 1.6em;
+}
+
+
+
+
+/* für die tip-auswahl_seite /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.article_tip_auswahl {
+	grid-column: 2 / span 4;
+	grid-row: 3;
+	height: auto;
+	background-color: #F09B9C;
+	padding-right: auto;
+	padding-left: auto;
+	margin-right: 10px;	
+}
+
+.article_tip_auswahl h1 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #1614CB;
+	font-weight: bold;
+	text-align: left;
+	font-size: 2em;
+}
+
+.article_tip_auswahl h11 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #ED1014;
+	font-weight: bold;
+	text-align: left;
+	font-size: 3em;
+}
+
+.article_tip_auswahl h2 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #1C1ADD;
+	font-weight: 300;
+	text-align: right;
+	font-size: 1.5em;
+}
+
+.article_tip_auswahl h3 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #1C1ADD;
+	background-color: #ECE772;
+	font-weight: 200;
+	text-align: left;
+	font-size: 1em;
+}
+
+.article_tip_auswahl table {
+	width: 100%;
+	margin: 10px;
+	padding: 0;
+	background-color: #F09B9C;
+}
+
+.article_tip_auswahl td {
+	width: 50%;
+	padding: 15px;
+	border-radius: 20px 0 0;
+	border: thick solid #B30112;
+	margin: 10px;
+	color: #000000;
+	background-color: #F4EE56;
+}
+
+
+
+/* ende tip_auswahl_seite /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+.aside {
+	grid-column: 5;
+	grid-row: 3;
+	height: 78em;
+	background-color: #fff;
+	margin_top: 10px;
+	margin_bottom: 10em;
+	padding-top: auto;
+	padding-right: auto;
+	margin: 10;
+	padding: 5px;
+}
+
+.aside h1 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #1614CB;
+	font-weight: bold;
+	text-align: left;
+	font-size: 2.8em;
+}
+
+.aside h2 ul li a {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #1C1ADD;
+	font-weight: 300;
+	text-align: left;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	text-decoration: none;
+	list-style-type: square;
+	line-height: normal;
+}
+
+.aside h3 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #1C1ADD;
+	background-color: #ECE772;
+	font-weight: 200;
+	text-align: left;
+	font-size: 1.5em;
+}
+
+
+
+
+
+
+
+
+.abstand {
+	grid-column: 2 / span 4;
+	grid-row: 4;
+	height: 1em;
+	/*background-color: #FFFFFF;*/
+	padding-right: auto;
+	padding-left: auto;
+}
+
+.abstand h1 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #ED1014;
+	font-weight: bold;
+	text-align: center;
+	font-size: 1em;
+}
+
+
+
+
+
+
+.footer {
+	grid-column: 1 / span 6;
+	grid-row: 5;
+	height: 10em;
+	background-color: #ABA9C4;
+	padding-right: auto;
+	padding-left: auto;
+	padding: 10px;
+}
+
+.footer h1 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #FFF;
+	font-weight: 400;
+	text-align: center;
+	font-size: 2em;
+}
+
+.footer h1 a {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed",  "Helvetica", "Arial", sans-serif;
+	color: #FFF;
+	font-weight: 400;
+	font-size: 1em;
+	text-decoration: none;
+}
