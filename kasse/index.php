@@ -70,13 +70,13 @@ echo "<h1>Bitte hier registrieren:</h1>";
     
             if ( $email_vorhanden == TRUE ) { $einloggen = FALSE; 
                                             
-                   echo "<h1><a href='http://localhost/einloggen.php'><font style='color: #FFF; background-color: #E7801A;'>&nbsp;&nbsp;Passwort oder eMail ist falsch oder vorhanden&nbsp;&nbsp;</font></h1></a>";
+                   echo "<h1><a href='http://localhost/gscheiderle/einloggen.php'><font style='color: #FFF; background-color: #E7801A;'>&nbsp;&nbsp;Passwort oder eMail ist falsch oder vorhanden&nbsp;&nbsp;</font></h1></a>";
                                             }
     
             if ( $einloggen == TRUE )
                 
 			   {
-                   echo "<h1><a href='http://localhost/einloggen.php'><font style='color: #FFF; background-color: #E7801A;'>&nbsp;&nbsp;Jetzt hier einloggen !&nbsp;&nbsp;</font></h1></a>";
+                   echo "<h1><a href='http://localhost/gscheiderle/einloggen.php'><font style='color: #FFF; background-color: #E7801A;'>&nbsp;&nbsp;Jetzt hier einloggen !&nbsp;&nbsp;</font></h1></a>";
                }
 	
 	

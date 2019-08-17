@@ -27,9 +27,9 @@
 		
 <?php  
         
-/* $form="<form method='POST' action='http://localhost/einloggen.php?kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>"; */
+/* $form="<form method='POST' action='http://localhost/gscheiderle/einloggen.php?kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>"; */
         
-            $form="<form method='POST' action='http://localhost/einloggen.php?kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>";
+            $form="<form method='POST' action='http://localhost/gscheiderle/einloggen.php?kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>";
         
 	
 echo $form;
@@ -155,8 +155,8 @@ include("php_code/einloggen_script.php");
         {
     
          
-        // echo "<a href='http://localhost/kasse/zahlung_abschliessen.php'><h1>Zur Kasse</a>";
-        echo "<a href='http://localhost/kasse/zahlung_abschliessen.php'><h1>Zur Kasse</a>";
+        // echo "<a href='http://localhost/gscheiderle/kasse/zahlung_abschliessen.php'><h1>Zur Kasse</a>";
+        echo "<a href='http://localhost/gscheiderle/kasse/zahlung_abschliessen.php'><h1>Zur Kasse</a>";
         
         }  
         

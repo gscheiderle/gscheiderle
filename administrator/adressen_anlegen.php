@@ -925,12 +925,12 @@ $inhalt.= "
       <td align=\"center\"><font face=\"Times\" size=\"4\" color=\"#000000\">
       Folgen Sie diesem Link:
       <br><br><i>";
-$inhalt.= "<a href=\"http://localhost/shop/index.php?seiten_index=erstanmeldung&code=$_COOKIE[PHPSESSID]&zurueck=$warenkorb\">Code_Link</a>"; 
+$inhalt.= "<a href=\"http://localhost/gscheiderle/shop/index.php?seiten_index=erstanmeldung&code=$_COOKIE[PHPSESSID]&zurueck=$warenkorb\">Code_Link</a>"; 
    
 $inhalt.= "<br><br>
 Funktioniert evtl. nicht in allen eMail-Programmen: dann kopieren Sie den Link<br>
       und f&uuml;gen ihn in die Adress-Leiste Ihres Internet-Browsers ein.<br><br>
-      http://localhost/shop/index.php?seiten_index=erstanmeldung&code=$_COOKIE[PHPSESSID]&zurueck=$warenkorb<br><br>
+      http://localhost/gscheiderle/shop/index.php?seiten_index=erstanmeldung&code=$_COOKIE[PHPSESSID]&zurueck=$warenkorb<br><br>
 
       </i>IHR TEAM VARIUSMEDIEN e.K.<br>
       Copy-Shop Eberbach

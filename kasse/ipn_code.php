@@ -168,7 +168,7 @@ Ihr Zugang zu den Tipps:<br><br>";
 
 $inhalt.="<br><br>";
      
-$inhalt.="<a href='http://localhost/tcpdf/examples/pdf_rechnung_gscheiderle.php?re_nr=$_POST[invoice]&kd_nr=$_POST[custom]&transaktionsnr=$_POST[txn_id]' target='_blanc'>RECHNUNG DRUCKEN UND/ODER PDF SPEICHERN</a><br>
+$inhalt.="<a href='http://localhost/gscheiderle/tcpdf/examples/pdf_rechnung_gscheiderle.php?re_nr=$_POST[invoice]&kd_nr=$_POST[custom]&transaktionsnr=$_POST[txn_id]' target='_blanc'>RECHNUNG DRUCKEN UND/ODER PDF SPEICHERN</a><br>
 <br>";
      
 
@@ -220,7 +220,7 @@ Zugang zu den Tipps:<br><br>";
 
 $inhalt_1.="<br><br>";
      
-$inhalt_1.="<a href='http://localhost/kasse/ipn_analyse.php?transaktionsnr=$_POST[txn_id]'>IPN $_POST[txn_id]</a><br>
+$inhalt_1.="<a href='http://localhost/gscheiderle/kasse/ipn_analyse.php?transaktionsnr=$_POST[txn_id]'>IPN $_POST[txn_id]</a><br>
 
 <br>
 

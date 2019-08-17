@@ -46,9 +46,9 @@ if ( ( $_POST['rechnung_erstellen'] == TRUE ) || ( $_POST['paypal_formular'] == 
     
       $form_2="<form action='https://www.paypal.com/cgi-bin/websrc' method='POST'>";
 	
-      // $form_2="<form action='http://localhost/gscheiderle/test_dateien/test_sendung.php' target='_blanc' method='POST'>"; 
+      // $form_2="<form action='http://localhost/gscheiderle/gscheiderle/test_dateien/test_sendung.php' target='_blanc' method='POST'>"; 
     
-      // $form_2="<form action='http://localhost/gscheiderle/kasse/ipn_code.php' target='_blanc' method='POST'>"; 
+      // $form_2="<form action='http://localhost/gscheiderle/gscheiderle/kasse/ipn_code.php' target='_blanc' method='POST'>"; 
     
     
     
@@ -237,8 +237,8 @@ echo "
    <input type='hidden' name='invoice' value='$neuerenr' />
    <input type='hidden' name='cmd' value='_cart' />
    
-   <input type='hidden' name='cancel_return' value='http://localhost/kasse/cancel_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />
-   <input type='hidden' name='return' value='http://localhost/kasse/danke_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />
+   <input type='hidden' name='cancel_return' value='http://localhost/gscheiderle/kasse/cancel_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />
+   <input type='hidden' name='return' value='http://localhost/gscheiderle/kasse/danke_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />
    
    <input type='hidden' name='rm' value='2' />
    <input type='hidden' name='tax_cart' value='$mehrwert_steuer' />
@@ -274,8 +274,8 @@ echo "
 </html>
 
 
-  <!--  <input type='hidden' name='cancel_return' value='http://localhost/gscheiderle.de/kasse/cancel_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />
+  <!--  <input type='hidden' name='cancel_return' value='http://localhost/gscheiderle/gscheiderle.de/kasse/cancel_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />
    <input type='hidden' name='return' value='http1://127.0.0.1/gscheiderle.de/kasse/danke_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />-->
 
- <!--  <input type='hidden' name='cancel_return' value='http://localhost/gscheiderle/kasse/cancel_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />
-   <input type='hidden' name='return' value='http://localhost/gscheiderle/kasse/danke_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />-->
+ <!--  <input type='hidden' name='cancel_return' value='http://localhost/gscheiderle/gscheiderle/kasse/cancel_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />
+   <input type='hidden' name='return' value='http://localhost/gscheiderle/gscheiderle/kasse/danke_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />-->

@@ -38,7 +38,7 @@ if ( ( $_POST['ueberweisung_erstellen'] == TRUE ) || ( $_POST['paypal_formular']
  $form_1='';    
 $form_2="<form action='https://www.paypal.com/cgi-bin/websrc' method='POST'>";
 	
-	/* $form_2="<form action='http://localhost/kasse/test_sendung.php' target='_blanc' method='POST'>";  */
+	/* $form_2="<form action='http://localhost/gscheiderle/kasse/test_sendung.php' target='_blanc' method='POST'>";  */
 }
     
   echo $form_1;
@@ -196,8 +196,8 @@ echo "
    <input type='hidden' name='upload' value='1' />
    <input type='hidden' name='business' value='u.sack@variusmedien.de' /> 
    <input type='hidden' name='invoice' value='$_GET[ueberweisung]' />
-   <input type='hidden' name='cancel_return' value='http://localhost/kasse/cancel_zahlung.php?seiten_id=1001&kd_nr=$_GET[email]' />
-   <input type='hidden' name='return' value='http://localhost/kasse/danke_zahlung.php?kd_nr=$_GET[email]' />
+   <input type='hidden' name='cancel_return' value='http://localhost/gscheiderle/kasse/cancel_zahlung.php?seiten_id=1001&kd_nr=$_GET[email]' />
+   <input type='hidden' name='return' value='http://localhost/gscheiderle/kasse/danke_zahlung.php?kd_nr=$_GET[email]' />
     <input type='hidden' name='rm' value='2' />
     <input type='hidden' name='tax_cart' value='$mehrwertsteuer' />
     <input type='hidden' name='item_number_1' value='1' />
