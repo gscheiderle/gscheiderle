@@ -7,9 +7,7 @@ if (! isset( $_COOKIE['pseudo_kd_nr'] ) ) { setcookie("pseudo_kd_nr",$_GET['forc
 	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
 
 <title>Ggscheiderles Rubriken</title>
-		<!--<link rel="stylesheet" type="text/css"  media="screen and (max-width: 980px)" href="css/style_768.css">--> <!-- Handy -->
-		<!--<link rel="stylesheet" type="text/css"  media="screen and (min-width: 981px )" href="css/style_tip_cart.css">--> <!-- stehendes Rechteck -->
-		<!--<link rel="stylesheet" type="text/css"  media="screen and (min-width: 1300px)" href="css/style_1200.css">--> <!-- grosser Bildschirm -->
+
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -35,65 +33,74 @@ include("php_code/array_rubriken.php");
 
 ?>		
 	
-<div class="container">	
+
 	
 <?php 
-	
+echo "<div class='container'>";		
 include("seitenelemente/header.html"); 
-	
+echo "</div>";
 ?>
 	
-</div>		
+		
     
 <br>	
     
-<div class="container">	
-	
-<?php include("seitenelemente/navigation.php"); ?>
-	
-</div>	
+<?php 
+include("seitenelemente/navigation.php"); 
+
+?>
     
-	<br>
+<br><br>
 	
-<div class="container">		
+<div align="center">
+<table width="80%">
+<tr><td>
 	
-  <div class="row">
 		
-       <div class="col-md-12 bg-white text-white" style="text-align: left;">
-
-            
-                 
-           <?php 
-		        echo "<div align='center'>";
-                echo "<table border='1' style='width:95%; align:center'>";
-                $zae_hler=1;
-            
-				foreach ( $rubrik_for_frontpage_3 as $key => $value ) {
-                    
-                    include("php_code/rubriken_zaehlen.php");
-                    
-                    $zeilen_ende='';
-                    
-					if ( $zae_hler % 3 != 0 ) { $zeilen_ende="<td width='5%'> </td>"; }
-                    if ( $zae_hler % 3 == 0 ) { $zeilen_ende="</tr><tr>"; }
+	
+          <?php 
+		        
+   			echo "<div class='container'>";	
+	
+					$zae_hler=-1;
+	
+	
+					echo "</div><div class='row'>";
+	
+			foreach ( $rubrik_for_frontpage_3 as $key => $value ) {
 					
-					print_r("<td hight='3em' width='30%'><a href='tip_auswahl.php?forcex=$zufall_id&rubrik=$key'><font style='font-family: arial; font-color: #000; font-size: 2em; text-decoration: none;'>$value</a> ($anzahl_db)</font></td>".$zeilen_ende."");
-                    
-                    $zae_hler++;
-                    
-				}
-	            echo "</tr>";
-	  			echo "</table>";
+					$zae_hler++;
+					
+					include("php_code/rubriken_zaehlen.php");
+					
 				
-			?>
-             
-		
-	   </div>
+					$zeile="<div class='col-sm-4 bg-white text-white' style='text-align: left;'>"; 
+				
+											  
+					if ( $zae_hler % 3 == 0 ) 	  { $zeile="</div><div class='row'>";
+						                            $zeile.="<div class='col-sm-4 bg-white text-white' style='text-align: left;'>"; 
+												  }
+				
+											 
+					print_r("$zeile<a href='tip_auswahl.php?forcex=$zufall_id&rubrik=$key'><h3>$value ($anzahl_db)</a></h3></div>");
+                    
+                    $zeile="";
 
-  </div>               
+				}
+	        
+			echo "</div>";	
+			?>
+
+
+	</td>
+	</tr>
+	</table>	
+	
+
+  		</div>               
 	</div>   
 	
-	<br>
+	<br><br>
       
 <div class="jumbotron text-center bg-secondary text-white" >
 	
@@ -101,8 +108,7 @@ include("seitenelemente/header.html");
 	
 </div>
 	
-	
-	
+
 		   </div> 	<!-- ende div wrapper -->
 		</form>
 	</body>

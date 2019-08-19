@@ -5,13 +5,13 @@
 	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
    <!-- <META HTTP-EQUIV="REFRESH"  CONTENT="10;URL=http://192.168.2.106/gscheiderle/standartseite.php">-->
 <title>Ggscheiderles Cart</title>
-		<link rel="stylesheet" type="text/css"  media="screen and (max-width: 980px)" href="css/style_768.css"> <!-- Handy -->
-		
-		<link rel="stylesheet" type="text/css"  media="screen and (min-width: 981px )" href="css/style_tip_cart.css"> <!-- stehendes Rechteck -->
-		
-		<link rel="stylesheet" type="text/css"  media="screen and (min-width: 1300px)" href="css/style_1200.css"> <!-- grosser Bildschirm -->
 
-		
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script> <src="http://use.edgefonts.net/source-sans-pro:n2,n6,n4,n3:default.js" type="text/javascript"></script>
 		
 </head>
 	<body>
@@ -27,43 +27,47 @@
 include("intern/funktionen.php"); 
 include("intern/mysql_connect_gscheiderle.php");
 include("php_code/cart_abrufen.php"); 
-        
-        
-        
+      
 ?>		
 		
-	
-<div class="wrapper">
-	
 
-	<?php include("seitenelemente/header.html"); ?>
+<?php 
+echo "<div class='container'>";		
+include("seitenelemente/header.html"); 
+echo "</div>";
+?>
     
-    <div class="nav">
-    
-<?php include("seitenelemente/navigation.php"); ?>
-    
-    </div>
-    
+<br>
+<br>
 
-    <div class="article">
+    
+<?php 
+include("seitenelemente/navigation.php"); 
+?>
+    
+<br>
+<br>
+   
+
+<div align="center">
 	
         <h1>Ihr Wissens-Korb:</h1>
 
-        <table border="0"  width="100%">
+        <table border="0"  width="90%">
             <tr>
-                <td style="background-color: #F1AD69">T.-Nr.:</td>
-                <td style="background-color: #F1AD69">Tipp:</td>
-                <td style="background-color: #F1AD69"align="right">R.-Nr.:</td>
-                <td style="background-color: #F1AD69">&nbsp;|&nbsp;</td>
-                <td style="background-color: #F1AD69">Rubrik.:</td>
-                <td style="background-color: #F1AD69"align="center">Anzahl:</td>
-                <td style="background-color: #F1AD69">Preis:</td>
-                <td style="background-color: #F1AD69"align="right"></td>
+                <th style="background-color: #F1AD69">T.-Nr.:</th>
+                <th style="background-color: #F1AD69">Tipp:</th>
+                <th style="background-color: #F1AD69"align="right">R.-Nr.:</th>
+                <th style="background-color: #F1AD69">&nbsp;|&nbsp;</th>
+                <th style="background-color: #F1AD69">Rubrik.:</th>
+				<th style="background-color: #F1AD69">Rubrik.:</th>
+ 				<th style="background-color: #F1AD69">Preis:</th>
+                <th style="background-color: #F1AD69"align="right"></th>
             </tr>
             
             <tr>
-                <td colspan="8"><hr></td></tr>
-                <td colspan="8">&nbsp;</td>
+                <th colspan="8"><hr></th></tr>
+                <th colspan="8">&nbsp;</th>
             </tr>
             
  <?php      foreach( $alle_artikel as $artikel) {
@@ -73,49 +77,49 @@ include("php_code/cart_abrufen.php");
                 }
 
             
-       echo "<tr><td colspan='8'>&nbsp;</td></tr>
+       echo "<tr><th colspan='8'>&nbsp;</th></tr>
             <tr>
-                <td colspan='4' align='right' style=' background-color: #BBB6B6'>MWSt. $mw_st %</td>
-                <td  colspan='2' align='right' style=' background-color: #BBB6B6'>&euro; MWSt, entalten:</td>
-                <td align='right' style=' background-color: #BBB6B6'>$mwst</td>
-                <td align='right' style=' background-color: #BBB6B6'><p></td>
+                <th colspan='4' align='right' style=' background-color: #BBB6B6'>MWSt. $mw_st %</th>
+                <th  colspan='2' align='right' style=' background-color: #BBB6B6'>&euro; MWSt, entalten:</th>
+                <th align='right' style=' background-color: #BBB6B6'>$mwst</th>
+                <th align='right' style=' background-color: #BBB6B6'><p></th>
             </tr>
             
             <tr>
-                <td colspan='6' align='right'><b>Summe</td>
-                <td align='right'><b>$summe</td>
-                <td align='right'><b><p></td>
+                <th colspan='6' align='right'><b>Summe</th>
+                <th align='right'><b>$summe</th>
+                <th align='right'><b><p></th>
              </tr>
              
              <tr>
-                <td colspan='8' style=' color: #FFF; text-decoration: none; background-color: #FFF; text-align: center;'>
+                <th colspan='8' style=' color: #FFF; text-decoration: none; background-color: #FFF; text-align: center;'>
             
                 <a href='alle_rubriken.php'>
                 <font style='font-family: arial; background-color: lightgreen; font-size: 1.5em; color: #000;'><br>
 
                 &nbsp;Weiter Wissen anh&auml;ufen&nbsp;</a></font>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;
              
              
                 <a href='kasse/auswahl_kunde.php'>
                 <font style='font-family: arial; background-color: lightgreen; font-size: 1.5em; color: #000;'>
-                &nbsp;Zur Kasse&nbsp;</a></font>
-              </td>
+                &nbsp;Zur&nbsp;Kasse&nbsp;</a></font>
+              </th>
              </tr>
              ";
             ?>
      
         </table>
+    </div>
     
-    </div> <!-- ende artikel-->
+    	<br><br>
+      
+<div class="jumbotron text-center bg-secondary text-white" >
+	
+<?php include("seitenelemente/footer.html"); ?>
+	
+</div>
 
-    
-    
-	<?php include("seitenelemente/footer.html"); ?>
-	
-	
-	
-		   </div> 	<!-- ende div wrapper -->
 		</form>
 	</body>
 </html>
