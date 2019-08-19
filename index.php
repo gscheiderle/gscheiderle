@@ -134,15 +134,15 @@ seien Sie neugierig und versuchen unsere Tipps!
 	</div>
 	
 
-	<div class="jumbotron text-center bg-secondary text-white" >
+<div class="jumbotron text-center bg-secondary text-white" >
 	
 <?php include("seitenelemente/footer.html"); ?>
-	</div>
+	
+</div>
 	
 
 
-		
-	</div> <!--ende wrapper-->
+
 <body>
 </body>
 </html>

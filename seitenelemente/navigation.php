@@ -1,13 +1,16 @@
 
 
 
- <div class="row">
-		
-
-    
+<div class="row">
+   
 <div class="col-md-12 bg-info text-white" style="text-align: center;">
 		 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
   <ul class="navbar-nav">
     <li class="nav-item active">
       <a class="nav-link" href='http://localhost/gscheiderle/index.php'>HOME</a>
@@ -35,7 +38,7 @@
       <a class='nav-link' href='http://localhost/gscheiderle/logout.php'>AUSLOGGEN</a>
     </li>";
 	  }
-	  ?>
+?>
 	
 	  <li class="nav-item">
       <a class="nav-link" href='http://localhost/gscheiderle/angebot_mitarbeit.php'>EIGENE TIPPS</a>
@@ -44,6 +47,7 @@
 </nav>
 		
 </div>
+	</div>
 	
 
 

@@ -47,44 +47,59 @@ include("seitenelemente/header.html");
     
 <br>	
     
+<div class="container">	
+	
 <?php include("seitenelemente/navigation.php"); ?>
+	
+</div>	
     
+	<br>
+	
+<div class="container">		
+	
+  <div class="row">
+		
+       <div class="col-md-12 bg-white text-white" style="text-align: left;">
 
- <table>
             
-                
+                 
            <?php 
-                
+		        echo "<div align='center'>";
+                echo "<table border='1' style='width:95%; align:center'>";
                 $zae_hler=1;
             
 				foreach ( $rubrik_for_frontpage_3 as $key => $value ) {
                     
-                     include("php_code/rubriken_zaehlen.php");
+                    include("php_code/rubriken_zaehlen.php");
                     
                     $zeilen_ende='';
                     
-                    if ( $zae_hler % 2 == 0 ) { $zeilen_ende="</tr><tr>"; }
+					if ( $zae_hler % 3 != 0 ) { $zeilen_ende="<td width='5%'> </td>"; }
+                    if ( $zae_hler % 3 == 0 ) { $zeilen_ende="</tr><tr>"; }
 					
-					print_r("<td hight='3em'><a href='tip_auswahl.php?forcex=$zufall_id&rubrik=$key'><font style='font-family: arial; font-color: #000; font-size: 2.5em; text-decoration: none;'>$value</a> ($anzahl_db)</font></td>".$zeilen_ende."");
+					print_r("<td hight='3em' width='30%'><a href='tip_auswahl.php?forcex=$zufall_id&rubrik=$key'><font style='font-family: arial; font-color: #000; font-size: 2em; text-decoration: none;'>$value</a> ($anzahl_db)</font></td>".$zeilen_ende."");
                     
                     $zae_hler++;
                     
 				}
+	            echo "</tr>";
+	  			echo "</table>";
 				
-				?>
+			?>
              
-                
-                
-         
-            </tr> 
-    
-        </table>
-    
-    </div> <!-- ende artikel-->
+		
+	   </div>
 
-    
-    
-	<?php include("seitenelemente/footer.html"); ?>
+  </div>               
+	</div>   
+	
+	<br>
+      
+<div class="jumbotron text-center bg-secondary text-white" >
+	
+<?php include("seitenelemente/footer.html"); ?>
+	
+</div>
 	
 	
 	
