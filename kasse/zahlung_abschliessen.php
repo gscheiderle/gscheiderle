@@ -5,20 +5,17 @@
 <meta charset="utf-8">
 	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
    <!-- <META HTTP-EQUIV="REFRESH"  CONTENT="10;URL=http://192.168.2.106/gscheiderle/standartseite.php">-->
-<title>Frontpage GSCHEIDERLE.DE</title>
-		<link rel="stylesheet" type="text/css"  media="screen and (min-width: 480px) and (max-width: 980px)" href="../css/style_768.css"> <!-- Handy -->
-		
-		<link rel="stylesheet" type="text/css"  media="screen and (min-width: 981px )" href="../css/style_tip_cart.css"> <!-- stehendes Rechteck -->
-		
-		<link rel="stylesheet" type="text/css"  media="screen and (min-width: 1300px)" href="../css/style_1200.css"> <!-- grosser Bildschirm -->
+<title>GSCHEIDERLE.DE Zahlung abschliessen</title>
 
-		
-<script>
-var __adobewebfontsappname__="dreamweaver"
-</script>
-
-<script src="http://use.edgefonts.net/source-sans-pro:n2,n6,n4,n3:default.js" type="text/javascript">
-</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="http://use.edgefonts.net/source-sans-pro:n2,n6,n4,n3:default.js" type="text/javascript"></script>	
+  <script var __adobewebfontsappname__="dreamweaver"> </script>
+  <script src="http://use.edgefonts.net/source-sans-pro:n2,n6,n4,n3:default.js" type="text/javascript"> </script>
+	
 </head>
 
 <body>
@@ -37,21 +34,13 @@ function neuladen($db_ausdruck,$formular_ausdruck)
   if($formular_ausdruck == ""){echo $db_ausdruck;}
   else {echo $formular_ausdruck; $db_ausdruck="";}
   }
-    
-$form_1="<form action='zahlung_abschliessen.php' method='POST'>";    
+    $form_1="<form action='zahlung_abschliessen.php' method='POST'>";    
     
 if ( ( $_POST['rechnung_erstellen'] == TRUE ) || ( $_POST['paypal_formular'] == TRUE ) ) {
     
        $form_1=''; 
     
       $form_2="<form action='https://www.paypal.com/cgi-bin/websrc' method='POST'>";
-	
-      // $form_2="<form action='http://localhost/gscheiderle/gscheiderle/test_dateien/test_sendung.php' target='_blanc' method='POST'>"; 
-    
-      // $form_2="<form action='http://localhost/gscheiderle/gscheiderle/kasse/ipn_code.php' target='_blanc' method='POST'>"; 
-    
-    
-    
 }
     
   echo $form_1;
@@ -59,36 +48,48 @@ if ( ( $_POST['rechnung_erstellen'] == TRUE ) || ( $_POST['paypal_formular'] == 
      
 ?>
 
-<div class="wrapper">
-	
 	
 <?php include("../seitenelemente/header.html"); ?>
+    
+<br>
+<br>
 
     
+<?php 
+include("../seitenelemente/navigation.php"); 
+?>    
 
- <div class="nav">   
-<?php include("../seitenelemente/navigation.php"); ?>
-    </div>
-    
-    
+<br>
+<br>
 
-
-
-<div class="article">
+<div class="container"> 
 	
+<div class="row">
+		
+    <div class="col-md-3 ">
+     </div>
+    
+       <div class="col-md-6 bg-white text-info" style="text-align: center;">
 
 <?php  
     
 if ( $_COOKIE['kd_nr'] != "" ) {
 mysqli_query($link,"update cart set kd_nr = '$_COOKIE[kd_nr]' where pseudo_kd_nr = '$_COOKIE[pseudo_kd_nr]' "); 
-echo "<h1>
-Sie haben geordert:
-
-</h1>";  
+echo "<h1> Sie haben geordert: <br> <br></h1>";  
 }
-else { echo "<h1><font style='color: red;'>Sie sind nicht eingeloggt !<br></font></h1>"; }   
-    
-    
+else { echo "<h1><font style='color: red;'>Sie sind nicht eingeloggt !<br></font><br> <br></h1>"; 
+	 }   
+?>    
+           
+	  </div>
+		   
+       <div class="col-md-3 ">
+      </div>
+	</div>
+</div>		
+
+<?php
+	
 $email_select=mysqli_query($link," select kd_nr, name, vorname, strasse, plz, ort, email from adressen where kd_nr = '$_COOKIE[kd_nr]' " );
 while( $result_email=mysqli_fetch_array($email_select, MYSQLI_BOTH ) ) {
 $kd_nr_db=$result_email['kd_nr'];
@@ -102,27 +103,31 @@ $email_db=$result_email['email'];
 
 ?>
     
-<table border="0" width="100%" cellspacing="20px">  
+
+<div class="container"> 
+	
+<div class="row">
+		
+    <div class="col-md-2 ">
+     </div>
     
-    <tr>
-    <td  width="70%" style="vertical-align: top;">
-        
- 
-    
- <table border="0" width="100%">
+       <div class="col-md-8 bg-white text-dark" style="text-align: center;">
+		   
+		   <div class="table-responsive">
+  
+			   <table class="table" border="0" width="100%">
+         
+
             <tr>
-                <td style=' background-color: #EEE6B6' >Tipp.-Nr.:</td>
+                
                 <td style=' background-color: #EEE6B6'>Tipp:</td>
-                <td style=' background-color: #EEE6B6; text-align: right;'>Rubrik.-Nr.:</td>
-                <td style=' background-color: #EEE6B6'>&nbsp;|&nbsp;</td>
                 <td style=' background-color: #EEE6B6'>Rubrik.:</td>
-                <td style=' background-color: #EEE6B6; text-align: center;'>Anzahl:</td>
-                <td style=' background-color: #EEE6B6; text-align: right;'>Einzel-Preis:</td>
+                <td style=' background-color: #EEE6B6; text-align: right;'>Preis:</td>
                 <td style=' background-color: #EEE6B6; text-align: right;'> </td>
             </tr>
-            <tr><td colspan="8">&nbsp;</td></tr>
+            <tr><td colspan="4">&nbsp;</td></tr>
      
- <?php include("../php_code/cart_abrufen.php"); ?>    
+<?php include("../php_code/cart_abrufen.php"); ?>    
      
 <?php       foreach ( $alle_artikel as $value ) {
     
@@ -132,39 +137,51 @@ $email_db=$result_email['email'];
      
      
  <?php     
-
-            
-            echo "
-            <tr><td colspan='8'>&nbsp;</td></tr>
+	 	echo "
+            <tr><td colspan='4'>&nbsp;</td></tr>
             <tr>
-                <td colspan='6' style='text-align: right; background-color: #EEE6B6'>$mw_st % enhaltene Mwst.:</td>
+                <td colspan='2' style='text-align: right; background-color: #EEE6B6'>$mw_st % enhaltene Mwst.:</td>
                 <td style='text-align: right; background-color: #EEE6B6'>$mwst&nbsp;&nbsp;</td>
                 <td style='text-align: center; background-color: #EEE6B6'>&euro;</td>
             </tr>
             
             <tr>
-                <td colspan='6' style='text-align: right;'><b>Summe</td>
+                <td colspan='2' style='text-align: right;'><b>Summe</td>
                 <td style='text-align: right;'><b>$summe&nbsp;&nbsp;</td>
                 <td style='text-align: center; background-color: #FFF'><b>&euro;</td>
              </tr>
   
              ";
-            ?>
-    
-  
-        </table>
-        
-        
-    </td>
-        
-        <td  width="70%" style="vertical-align: top;">
             
-  
+    
+ echo "</table>";
+        
+echo "		   
+	  </div>
+		   
+       <div class='col-md-2'>
+      </div>
+	</div>
+</div>	";
+		   
+?>		   
+ 
+        
+<div class="container"> 
+	
+<div class="row">
+		
+    <div class="col-md-2 ">
+     </div>
+    
+       <div class="col-md-8 bg-white text-dark" style="text-align: center;">
+
 	
 <?php
     
     
-$paypal_zusatz="Sie k&ouml;nnen mit PAYPAL SICHER zahlen, auch wenn Sie dort  &uuml;ber kein Konto verf&uuml;gen.&nbsp;<br>
+$paypal_zusatz="Sie k&ouml;nnen mit PAYPAL SICHER zahlen, auch wenn Sie dort &uuml;ber kein Konto verf&uuml;gen.<br>
+
 Zum Beispiel per Lastschrift von Ihrem Bank-Konto oder mit Kreditkarte.&nbsp;";
     
 $paypal_zusatz_2="Nach dem Bezahl-Vorgang bei Paypal warten Sie<br>
@@ -207,6 +224,14 @@ echo "</div>";
 echo "</td>
   </tr>
     </table>";
+		   
+echo "		   
+	  </div>
+		   
+       <div class='col-md-3'>
+      </div>
+	</div>
+</div>	";		   
  
 
 
@@ -237,8 +262,8 @@ echo "
    <input type='hidden' name='invoice' value='$neuerenr' />
    <input type='hidden' name='cmd' value='_cart' />
    
-   <input type='hidden' name='cancel_return' value='http://localhost/gscheiderle/kasse/cancel_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />
-   <input type='hidden' name='return' value='http://localhost/gscheiderle/kasse/danke_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />
+   <input type='hidden' name='cancel_return' value='http://192.168.2.106/gscheiderle/kasse/cancel_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />
+   <input type='hidden' name='return' value='http://192.168.2.106/gscheiderle/kasse/danke_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />
    
    <input type='hidden' name='rm' value='2' />
    <input type='hidden' name='tax_cart' value='$mehrwert_steuer' />
@@ -257,25 +282,22 @@ echo "
 
   
 
-  
-
-  
-    </div> <!-- ende artikel-->
 
     
     
-	<?php include("../seitenelemente/footer.html"); ?>
+<br><br>
+      
+<div class="jumbotron text-center bg-secondary text-white" >
+	
+<?php include("../seitenelemente/footer.html"); ?>
+	
+</div>
 	
 	
 	
-		   </div> 	<!-- ende div wrapper -->
+		   
 		</form>
 	</body>
 </html>
 
 
-  <!--  <input type='hidden' name='cancel_return' value='http://localhost/gscheiderle/gscheiderle.de/kasse/cancel_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />
-   <input type='hidden' name='return' value='http1://127.0.0.1/gscheiderle.de/kasse/danke_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />-->
-
- <!--  <input type='hidden' name='cancel_return' value='http://localhost/gscheiderle/gscheiderle/kasse/cancel_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />
-   <input type='hidden' name='return' value='http://localhost/gscheiderle/gscheiderle/kasse/danke_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />-->

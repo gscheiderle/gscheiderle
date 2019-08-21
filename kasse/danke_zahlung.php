@@ -47,7 +47,7 @@ include("../intern/parameter.php");
 echo "<form action='danke_seite.php' method='POST'>";
 
 
-// http://localhost/gscheiderle/kasse/danke_zahlung.php?kd_nr=usnh2000@yahoo.de&amt=0.50&cc=EUR&cm=1151611269&st=Completed&tx=9BE05538VT650330T
+// http://192.168.2.106/gscheiderle/kasse/danke_zahlung.php?kd_nr=usnh2000@yahoo.de&amt=0.50&cc=EUR&cm=1151611269&st=Completed&tx=9BE05538VT650330T
 
 
 $kd_nr_1=substr("$_GET[cm]",0,5);
@@ -126,7 +126,7 @@ $email_empfang_absender="'info@gscheiderle.de'";
 
 
 
-echo "<a href='http://localhost/gscheiderle/tcpdf/examples/provisions_zahlung.php?ueberweisung=$ueberweisung_nr&kd_nr=$kd_nr_1&transaktionsnr=$transaktionsnr'>PROVISIONSS-ZAHLUNG DRUCKEN UND PDF SPEICHERN</a><br>
+echo "<a href='http://192.168.2.106/gscheiderle/tcpdf/examples/provisions_zahlung.php?ueberweisung=$ueberweisung_nr&kd_nr=$kd_nr_1&transaktionsnr=$transaktionsnr'>PROVISIONSS-ZAHLUNG DRUCKEN UND PDF SPEICHERN</a><br>
 <br>";
 
 

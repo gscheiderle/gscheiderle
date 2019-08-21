@@ -74,11 +74,11 @@ include("seitenelemente/navigation.php");
 					include("php_code/rubriken_zaehlen.php");
 					
 				
-					$zeile="<div class='col-sm-4 bg-white text-white' style='text-align: left;'>"; 
+					$zeile="<div class='col-md-4 bg-white text-white' style='text-align: left;'>"; 
 				
 											  
 					if ( $zae_hler % 3 == 0 ) 	  { $zeile="</div><div class='row'>";
-						                            $zeile.="<div class='col-sm-4 bg-white text-white' style='text-align: left;'>"; 
+						                            $zeile.="<div class='col-md-4 bg-white text-white' style='text-align: left;'>"; 
 												  }
 				
 											 

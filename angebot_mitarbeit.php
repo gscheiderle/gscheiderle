@@ -5,20 +5,14 @@
 <title>Einweisung Mitarbeiter</title>
 
 
-		<link rel="stylesheet" type="text/css"  media="screen and (max-width: 980px)" href="ckeditor/css/style_768.css"> <!-- Handy -->
-		
-		<link rel="stylesheet" type="text/css"  media="screen and (min-width: 981px )" href="css/style_tip_cart.css"> <!-- stehendes Rechteck -->
-		
-		<link rel="stylesheet" type="text/css"  media="screen and (min-width: 1300px)" href="css/style_1200.css"> <!-- grosser Bildschirm -->
-<script>
-var __adobewebfontsappname__="dreamweaver"
-</script>
-
-<script src="http://use.edgefonts.net/source-sans-pro:n2,n6,n4,n3:default.js" type="text/javascript">
-</script>
-
-<style type="text/css">
-</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="http://use.edgefonts.net/source-sans-pro:n2,n6,n4,n3:default.js" type="text/javascript"></script>	
+  <script var __adobewebfontsappname__="dreamweaver"> </script>
+  <script src="http://use.edgefonts.net/source-sans-pro:n2,n6,n4,n3:default.js" type="text/javascript"> </script>
 </head>
 	
 <body>
@@ -32,24 +26,32 @@ var __adobewebfontsappname__="dreamweaver"
 include("intern/mysql_connect_gscheiderle.php"); 
 include("intern/parameter.php");
 include("intern/funktionen.php");
-	
-	
-	include("seitenelemente/header.html");
-	
-echo "<div class='nav'>";	
-	
-	include("seitenelemente/navigation.php");
-	
-echo "</div>";		
-	
-
-	
-echo "<div class='article'>";
+		
 	
 ?>
+	
+	<?php include("seitenelemente/header.html"); ?>
     
+<br>
+<br>
+
     
-<div align="center">
+<?php 
+include("seitenelemente/navigation.php"); 
+?>    
+
+<br>
+<br>
+
+<div class="container">
+	<div class="row">
+		
+		<div class="col-md-2"></div>
+		
+		
+<div class="col-md-10">	
+   
+<div align="left">
 <table border="0" style="width: 95%; height: 400px;">
        
         
@@ -64,7 +66,7 @@ Da haben wir<br>
 
             
        <h4>
-        <u>
+        <ul>
             
             
             <li>der Tipp ist weder rassistisch, sexistisch noch sonst irgenwie anst&ouml;&szlig;ig</li>
@@ -104,28 +106,28 @@ Da haben wir<br>
         <li>Sonst k&ouml;nnen Sie weder bezahlen noch wir</li>
         <li>Ihnen die Provision überweisen</li>
 
-    </u>
+    </ul>
     </h4>
     
     
     </td>
 </tr>
     
-    
-    
-    
- </table>
+</table>
 	
- </div> <!-- article //--> 
+	</div>
+	</div>
+	</div>
+	</div>
 
- </div> <!-- wrapper //--> 
 
-
-<?php 
-
-include("seitenelemente/footer.html");
-
-?>
+<br><br>
+      
+<div class="jumbotron text-center bg-secondary text-white" >
+	
+<?php include("seitenelemente/footer.html"); ?>
+	
+</div>
 
 		</form>
 	</body>

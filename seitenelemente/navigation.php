@@ -13,16 +13,16 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
   <ul class="navbar-nav">
     <li class="nav-item active">
-      <a class="nav-link" href='http://localhost/gscheiderle/index.php'>HOME</a>
+      <a class="nav-link" href='http://192.168.2.106/gscheiderle/index.php'>HOME</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href='http://localhost/gscheiderle/alle_rubriken.php'>RUBRIKEN</a>
+      <a class="nav-link" href='http://192.168.2.106/gscheiderle/alle_rubriken.php'>RUBRIKEN</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href='http://localhost/gscheiderle/cart.php'>CART</a>
+      <a class="nav-link" href='http://192.168.2.106/gscheiderle/cart.php'>CART</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href='http://localhost/gscheiderle/einloggen.php'>EINLOGGEN</a>
+      <a class="nav-link" href='http://192.168.2.106/gscheiderle/einloggen.php'>EINLOGGEN</a>
     </li>
 	  
 <?php
@@ -31,17 +31,17 @@
 	echo "
 	
 	 <li class='nav-item'>
-      <a class='nav-link' href='http://localhost/gscheiderle/kasse/zahlung_abschliessen.php'>BEZAHLEN</a>
+      <a class='nav-link' href='http://192.168.2.106/gscheiderle/kasse/zahlung_abschliessen.php'>BEZAHLEN</a>
     </li>
 	
 	 <li class='nav-item'>
-      <a class='nav-link' href='http://localhost/gscheiderle/logout.php'>AUSLOGGEN</a>
+      <a class='nav-link' href='http://192.168.2.106/gscheiderle/logout.php'>AUSLOGGEN</a>
     </li>";
 	  }
 ?>
 	
 	  <li class="nav-item">
-      <a class="nav-link" href='http://localhost/gscheiderle/angebot_mitarbeit.php'>EIGENE TIPPS</a>
+      <a class="nav-link" href='http://192.168.2.106/gscheiderle/angebot_mitarbeit.php'>EIGENE TIPPS</a>
     </li>
   </ul>
 </nav>

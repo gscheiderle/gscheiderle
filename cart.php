@@ -59,8 +59,8 @@ include("seitenelemente/navigation.php");
                 <th style="background-color: #F1AD69">Tipp:</th>
                 <th style="background-color: #F1AD69"align="right">R.-Nr.:</th>
                 <th style="background-color: #F1AD69">&nbsp;|&nbsp;</th>
-                <th style="background-color: #F1AD69">Rubrik.:</th>
-				<th style="background-color: #F1AD69">Rubrik.:</th>
+                <th style="background-color: #F1AD69">Rubrik:</th>
+				<th style="background-color: #F1AD69">Anzahl:</th>
  				<th style="background-color: #F1AD69">Preis:</th>
                 <th style="background-color: #F1AD69"align="right"></th>
             </tr>

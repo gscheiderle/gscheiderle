@@ -107,7 +107,7 @@ if ( $result_trans['brutto'] == $_GET['amt'] )  { /*echo "Der Brutto-Betrag ist 
                    
     
  
-// http://localhost/gscheiderle/kasse/danke_seite.php?kd_nr=11516&re_nr=10167&amt=1.00&cc=EUR&cm=11516&st=Completed&tx=9LT709038U0725310
+// http://192.168.2.106/gscheiderle/kasse/danke_seite.php?kd_nr=11516&re_nr=10167&amt=1.00&cc=EUR&cm=11516&st=Completed&tx=9LT709038U0725310
 
       
 $betrag=$_GET['amt'];    
@@ -179,7 +179,7 @@ dass die Codes ab jetzt 48 Stunden gelten! )</font><br><br>
 Die Leut' von GSCHEIDERLE.DE<br><br><br>";
 
 
-echo "<a href='http://localhost/gscheiderle/tcpdf/examples/pdf_rechnung_gscheiderle.php?re_nr=$_GET[re_nr]&kd_nr=$_GET[cm]&transaktionsnr=$_GET[tx]' target='_blanc'>QUITTIERTE RECHNUNG DRUCKEN<br>
+echo "<a href='http://192.168.2.106/gscheiderle/tcpdf/examples/pdf_rechnung_gscheiderle.php?re_nr=$_GET[re_nr]&kd_nr=$_GET[cm]&transaktionsnr=$_GET[tx]' target='_blanc'>QUITTIERTE RECHNUNG DRUCKEN<br>
 UND PDF SPEICHERN</a><br>
 <br>";
 
@@ -240,7 +240,7 @@ Ihr Zugang zu den Tipps:<br><br>";
 
 $inhalt.="<br><br>";
      
-$inhalt.="<a href='http://localhost/gscheiderle/tcpdf/examples/pdf_rechnung_gscheiderle.php?re_nr=$_GET[re_nr]&kd_nr=$_GET[cm]&transaktionsnr=$_GET[tx]' target='_blanc'>RECHNUNG DRUCKEN UND/ODER PDF SPEICHERN</a><br>
+$inhalt.="<a href='http://192.168.2.106/gscheiderle/tcpdf/examples/pdf_rechnung_gscheiderle.php?re_nr=$_GET[re_nr]&kd_nr=$_GET[cm]&transaktionsnr=$_GET[tx]' target='_blanc'>RECHNUNG DRUCKEN UND/ODER PDF SPEICHERN</a><br>
 <br>";
      
 
@@ -292,8 +292,8 @@ Zugang zu den Tipps:<br><br>";
 
 $inhalt_1.="<br><br>";
      
-// $inhalt_1.="<a href='http://localhost/gscheiderle/kasse/ipn_analyse.php?transaktionsnr=$transaktionsnr'>$transaktionsnr</a><br>
-$inhalt_1.="<a href='http://localhost/gscheiderle/kasse/ipn_analyse.php?transaktionsnr=$_GET[tx]'>IPN $_GET[tx]</a><br>
+// $inhalt_1.="<a href='http://192.168.2.106/gscheiderle/kasse/ipn_analyse.php?transaktionsnr=$transaktionsnr'>$transaktionsnr</a><br>
+$inhalt_1.="<a href='http://192.168.2.106/gscheiderle/kasse/ipn_analyse.php?transaktionsnr=$_GET[tx]'>IPN $_GET[tx]</a><br>
 
 <br>
 
