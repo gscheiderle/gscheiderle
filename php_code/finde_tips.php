@@ -2,8 +2,8 @@
 
 
  /*** selektiert die Tips's der von der Frontpage aus angewählten Rubrik */
-$zaehler_2=1;
-$zaehler=1;
+$zaehler_2=0;
+$zaehler=0;
 
 $color= "#D2D1F7";
 
@@ -17,14 +17,16 @@ while ( $result_tips = mysqli_fetch_array( $select_tips, MYSQLI_BOTH ) ) {
 
 	
 $tabelle.=
-    "<td style=' width: 50%; vertical-align: top; background-color: $color '><h2>".$result_tips['tip']."<br>
+    "<div class='col-md-4' style='background-color: $color;'><h2>".$result_tips['tip']."<br>
     nur &euro; ".$result_tips['preis']."</h2><br>
 
-    <div class='button'>
     <h2>Das will ich wissen: </h2>
     <button type='submit' name='in_cart' value='$result_tips[code]'><img src='images_system/cart.png' height='40px' width='40px' alt='cart.png'></button>
-    </div>
-</td>";
+	</div>";
+	
+
+	
+
 
 $zaehler_2++;
 $color="";	

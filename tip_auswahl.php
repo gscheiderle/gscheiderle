@@ -61,22 +61,21 @@ include("seitenelemente/navigation.php");
 
 <div class="container">
 		
-<div class="row">
-	
-	<div class="col-md-3">
+	<div class="row">
+		
+	<div class="col-md-2">
 	</div>
-	
 		
 <?php
 	
- echo "<table style='padding:10;'>";	  
- echo "<tr>";
+
  echo $tabelle;    
- echo "</tr>";
- echo "</table>";
+
 ?>    
-	<div class="col-md-3">
-	</div>
+	
+	
+<div class="col-md-2">
+</div>
 	
 </div>
 </div>
