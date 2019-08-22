@@ -77,7 +77,7 @@ include("seitenelemente/navigation.php");
 <div class="col-md-2">
 </div>
 	
-</div>
+	</div>
 </div>
 
 
