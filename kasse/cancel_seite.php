@@ -3,32 +3,41 @@
   <head>
     <title>Schade - etwas klappte nicht</title>
     <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-		<link rel="stylesheet" type="text/css"  media="screen and (max-width: 980px)" href="../css/style_768.css"> <!-- Handy -->
-		
-		<link rel="stylesheet" type="text/css"  media="screen and (min-width: 981px )" href="../css/style_tip_cart.css"> <!-- stehendes Rechteck -->
-		
-		<link rel="stylesheet" type="text/css"  media="screen and (min-width: 1300px)" href="../css/style_1200.css"> <!-- grosser Bildschirm -->
-
-<script>
-var __adobewebfontsappname__="dreamweaver"
-</script>
-
-<!--<script src="http://use.edgefonts.net/source-sans-pro:n2,n6,n4,n3:default.js" type="text/javascript">-->
-</script>  
-
+	  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="http://use.edgefonts.net/source-sans-pro:n2,n6,n4,n3:default.js" type="text/javascript"></script>	
+  <script var __adobewebfontsappname__="dreamweaver"> </script>
+  <script src="http://use.edgefonts.net/source-sans-pro:n2,n6,n4,n3:default.js" type="text/javascript"> </script>
   </head>
   <body>
       
-      <div class="wrapper">
-          
-          
-          <?php include("../seitenelemente/header.html"); ?>
-          
-          <div class="nav">
-          <?php include("../seitenelemente/navigation.php"); ?>
-          </div>
-      
- <div class="article"> 
+<?php include("../seitenelemente/header.html"); ?>
+    
+<br>
+<br>
+
+    
+<?php 
+include("../seitenelemente/navigation.php"); 
+?>    
+
+<br>
+<br>
+
+	  
+<div class="container">
+		
+	<div class="row">
+	
+	   <div class="col-md-2">
+			</div>
+
+ 	      <div class="col-md-8">	  
+	  
 <?php
           
       
@@ -74,15 +83,6 @@ if ( $anrede_db == "m" ) {$anrede = "Sehr geehrter <br>Herr "; }
 
 <h3>
 	
-
-
-
-<table width="1100px" cellpadding="10" cellspacing="0" bgcolor="#FFFFFF" border="0" >
-
-
- <tr>
- <td bgcolor="#FFFFFF" colspan="2" height="10px" align="left"  valign="TOP">
- 
  <?php 
  echo " 
 <h4>
@@ -98,29 +98,24 @@ Die Leut' von Gscheiderle.de <br><br>
 <br>
 Sie erhalten diese Nachricht auch per E-Mail !";
 ?>
-<br>
-<br>
-<br>
+	
+</div>
+
+	<div class="col-md-2">
+			</div>
+		
+		</div>
 	</div>
+
+
     
-    <div class="footer">
-	<h1>
+<br><br>
+      
+<div class="jumbotron text-center bg-secondary text-white" >
+	
 <?php include("../seitenelemente/footer.html"); ?>
-        </div>
-</h1>
-</td>
-</tr>
-
-
-
-
-</td>
-</tr>
-
- </table>
- 
-
- </div>
+	
+</div> 
  
 
 <?php 

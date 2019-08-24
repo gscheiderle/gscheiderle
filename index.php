@@ -18,6 +18,55 @@ if (! isset( $_COOKIE['pseudo_kd_nr'] ) ) { setcookie("pseudo_kd_nr",$_GET['forc
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script> <src="http://use.edgefonts.net/source-sans-pro:n2,n6,n4,n3:default.js" type="text/javascript"></script>
+	
+<script src="jquery-1.10.1.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+$(document).ready(function(){
+ /* Funktionsdefinition */
+ function getWindowMeasurements(){
+  $.ajax({
+  /* An dieses Script werden die Daten gesendet */
+  url: "php_code/__browser_fenster_auslesen_script.php",
+  method: "POST",
+  /* Die Notation "variable: wert" entspricht dem Versenden mit einem Formular
+  * Heißt: Im Zielscript kann man gesendete Daten wie aus einem Formular via $_POST['name_des_tags'] entgegen nehmen
+  */
+  data: {browser: window.navigator.userAgent, width: window.innerWidth, height: window.innerHeight},
+  /*
+  * Bei fehlerfreier Ausführung des Zielscripts nimmt eine Funktion Rückgaben vom Zielscript entgegen.
+  * Das können sein:
+  * - Eine Meldung über Erfolg/Mißerfolg einer Aktion
+  * - Daten zur Weiterverarbeitung mit JS
+  * - Eine Ausgabe einer Datenbankabfrage
+  * Zur Weiterverarbeitung wird eine Funktion aufgerufen
+  */
+  success: function(data){msgFromScript(data);}
+ });
+}
+
+/*
+* Rückmeldung vom PHP-Script (oder verarbeiten)
+*/
+function msgFromScript(data){
+ /*
+ * Rückgaben werden i.d.R. mit json_encode kodiert
+ */
+ var msg = $.parseJSON(data);
+ var ausgabe = "";
+ for(var el in msg){
+  ausgabe += el + ": " + msg[el] + "<br>";
+ }
+ $("#ausgabe").html(ausgabe);
+}
+
+/*
+* Funktionsaufruf beim Seitenaufruf
+*/
+getWindowMeasurements();
+});
+// -->
+</script>
 
 </head>
 	
@@ -57,7 +106,7 @@ include("php_code/zufallszahl.php");
 			gibt es nicht umsonst</font>
 		</h1>
 </div>
-	
+
 <div class="container width: 100%">
 	
 <div class="row">

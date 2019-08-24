@@ -42,7 +42,7 @@ echo "</div>";
 ?>
 	
 		
-    
+<br>    
 <br>	
     
 <?php 

@@ -23,18 +23,6 @@ if (! isset( $_COOKIE['pseudo_kd_nr'] ) ) { setcookie("pseudo_kd_nr",$_GET['forc
 <?php echo " <form method='POST' action='tip_auswahl.php?rubrik=$_GET[rubrik]'> "; ?>
 	  
 
-		
-<!--		<div class="container mt-3">
-  <h2>Order</h2>
-  <p>Change the visual order of a specific flex item(s) with the .order classes. Valid classes are from 0 to 12:</p>
-  <div class="d-flex mb-3">
-    <div class="p-2 order-3 bg-info">Flex item 1<br>Flex item 1<br>Flex item 1<br>Flex item 1<br>Flex item 1<br>Flex item 1<br>Flex item 1<br></div>
-    <div class="p-2 order-2 bg-warning">Flex item 2</div>
-    <div class="p-2 order-1 bg-primary">Flex item 3</div>
-  </div>
-</div>-->
-		
-
 	
 <?php 
 include("intern/parameter.php");
@@ -63,7 +51,9 @@ include("seitenelemente/navigation.php");
 		
 	<div class="row">
 		
-	<div class="col-md-2">
+		<?php $md="md"; ?>
+		
+	<div class=<?php echo "col-$md-2"; ?>>
 	</div>
 		
 <?php
@@ -74,7 +64,7 @@ include("seitenelemente/navigation.php");
 ?>    
 	
 	
-<div class="col-md-2">
+<div class=<?php echo "col-$md-2"; ?>>
 </div>
 	
 	</div>

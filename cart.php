@@ -49,49 +49,53 @@ include("seitenelemente/navigation.php");
 <br>
    
 
-<div align="center">
+<div class="container"> 
 	
-        <h1>Ihr Wissens-Korb:</h1>
-
-        <table border="0"  width="90%">
-            <tr>
-                <th style="background-color: #F1AD69">T.-Nr.:</th>
-                <th style="background-color: #F1AD69">Tipp:</th>
-                <th style="background-color: #F1AD69"align="right">R.-Nr.:</th>
-                <th style="background-color: #F1AD69">&nbsp;|&nbsp;</th>
-                <th style="background-color: #F1AD69">Rubrik:</th>
-				<th style="background-color: #F1AD69">Anzahl:</th>
- 				<th style="background-color: #F1AD69">Preis:</th>
-                <th style="background-color: #F1AD69"align="right"></th>
-            </tr>
-            
-            <tr>
-                <th colspan="8"><hr></th></tr>
-                <th colspan="8">&nbsp;</th>
-            </tr>
-            
- <?php      foreach( $alle_artikel as $artikel) {
-                
-                print_r($artikel);
+<div class="row">
+		
+    <div class="col-md-2 ">
+     </div>
     
-                }
+       <div class="col-md-8 bg-white text-dark" style="text-align: center;">
+		   
+		   <div class="table-responsive">
+  
+			   <table class="table" border="0" width="100%">
+				   
+				   
+		                <tr><td colspan="3"><p><h2>Sie haben ausgewählt:</h2></p></td></tr>		   
+         
 
-            
-       echo "<tr><th colspan='8'>&nbsp;</th></tr>
             <tr>
-                <th colspan='4' align='right' style=' background-color: #BBB6B6'>MWSt. $mw_st %</th>
-                <th  colspan='2' align='right' style=' background-color: #BBB6B6'>&euro; MWSt, entalten:</th>
-                <th align='right' style=' background-color: #BBB6B6'>$mwst</th>
-                <th align='right' style=' background-color: #BBB6B6'><p></th>
+                
+                <td style=' background-color: #EEE6B6'>Tipp:</td>
+                <td style=' background-color: #EEE6B6'>Rubrik.:</td>
+				<td style=' background-color: #EEE6B6; text-align: right;'>Preis:</td>
+            </tr>
+
+     
+<?php include("php_code/cart_abrufen.php"); ?>    
+     
+<?php       foreach ( $alle_artikel as $value ) {
+    
+            print_r("<h2>".$value."</h2>");
+}
+?>     
+     
+     
+ <?php     
+	 	echo "
+                <td colspan='2' style='text-align: right; background-color: #EEE6B6'>$mw_st % enhaltene Mwst.: &euro;</td>
+                <td style='text-align: right; background-color: #EEE6B6'>$mwst&nbsp;&nbsp;</td>
+                
             </tr>
             
             <tr>
-                <th colspan='6' align='right'><b>Summe</th>
-                <th align='right'><b>$summe</th>
-                <th align='right'><b><p></th>
+                <td colspan='2' style='text-align: right;'><b>Summe &euro;</td>
+                <td style='text-align: right;'><b>$summe&nbsp;&nbsp;</td>
              </tr>
-             
-             <tr>
+			 
+			              <tr>
                 <th colspan='8' style=' color: #FFF; text-decoration: none; background-color: #FFF; text-align: center;'>
             
                 <a href='alle_rubriken.php'>
@@ -106,12 +110,25 @@ include("seitenelemente/navigation.php");
                 &nbsp;Zur&nbsp;Kasse&nbsp;</a></font>
               </th>
              </tr>
+  
              ";
+            
+    
+ echo "</table>";
+        
+echo "		   
+	  		</div>
+			
+		   		<div class='col-md-2'>
+					</div>
+					
+			</div>
+		</div>
+	</div>";
+                
             ?>
      
-        </table>
-    </div>
-    
+
     	<br><br>
       
 <div class="jumbotron text-center bg-secondary text-white" >

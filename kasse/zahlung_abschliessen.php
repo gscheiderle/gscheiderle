@@ -201,7 +201,7 @@ echo "
 
 
 <button type='submit' value='rechnung_erstellen' name='rechnung_erstellen' 
-style=' text-align: center; border: 0px; border-color:; width:380px; height:50px; background-color: #00648d; border-width:0;font-family: Open Sans; font-size: 24px; font-weight: 700; color:#FFFFFF;border-radius: 6px 6px 6px 6px; box-shadow: 10px 10px 10px #dadada;'>Rechnung erstellen</button>&nbsp;&nbsp;&nbsp;";
+style=' text-align: center; border: 0px; border-color:; width:300px; height:50px; background-color: #00648d; border-width:0;font-family: Open Sans; font-size: 24px; font-weight: 700; color:#FFFFFF;border-radius: 6px 6px 6px 6px; box-shadow: 10px 10px 10px #dadada;'>Rechnung erstellen</button>&nbsp;&nbsp;&nbsp;";
 }
     
         
@@ -212,7 +212,7 @@ if ( ( $_POST['rechnung_erstellen'] == "rechnung_erstellen" )  || ( $_POST['payp
 include("../php_code/rechnung_erstellen.php"); 
     
 echo "
-<button type='submit' value='paypal_formular' name='paypal_formular' style=' text-align: center; border: 0px; border-color:; width:380px; height:50px; background-color: #00648d; border-width:0; font-family: Open Sans; font-size: 24px; font-weight: 700; color:#FFFFFF;border-radius: 6px 6px 6px 6px; box-shadow: 10px 10px 10px #dadada;'>PAYPAL-Formular senden</button>&nbsp;&nbsp;&nbsp;";
+<button type='submit' value='paypal_formular' name='paypal_formular' style=' text-align: center; border: 0px; border-color:; width:300px; height:50px; background-color: #00648d; border-width:0; font-family: Open Sans; font-size: 24px; font-weight: 700; color:#FFFFFF;border-radius: 6px 6px 6px 6px; box-shadow: 10px 10px 10px #dadada;'>PAYPAL-Formular senden</button>&nbsp;&nbsp;&nbsp;";
 
 } 
     
