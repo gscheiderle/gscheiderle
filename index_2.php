@@ -31,10 +31,8 @@ include("intern/mysql_connect_gscheiderle.php");
 include("php_code/array_rubriken.php"); 
 include("php_code/zufallszahl.php"); 
 
-?>		
 
-		
-	
+	?>
 <div class="wrapper">
 	
 	

@@ -16,6 +16,14 @@
 </head>
     
     <body>
+<?php		
+echo "<form action='danke_seite.php' method='POST'>";
+         
+
+include( "../intern/mysql_connect_gscheiderle.php" );
+include( "../intern/parameter.php" );
+		
+?>		
       
 <?php include("../seitenelemente/header.php"); ?>
     
@@ -25,29 +33,26 @@
     
 <?php 
 include("../seitenelemente/navigation.php"); 
+
 ?>    
 
 <br>
 <br>
 		
 		
-<div class="container">
+<?php echo "<div class='container'>
 		
-	<div class="row">
+	<div class='row'>
 	
-	   <div class="col-$md-2">
+	   <div class='col-$md-2'>
 			</div>
 
- 	      <div class="col-$md-8">
+ 	      <div class='col-$md-8'>"; ?>
 		
      
 <?php
          
-echo "<form action='danke_seite.php' method='POST'>";
-         
 
-include( "../intern/mysql_connect_gscheiderle.php" );
-include( "../intern/parameter.php" );
 include( "../php_code/freigabe_links.php" ); 
  
          
@@ -64,7 +69,9 @@ $email_db=$result_adresse['email'];
 }
 
 } // ende if GET-Status 
-          
+  
+
+			  
   
    
      
@@ -112,6 +119,7 @@ if ( $result_trans['brutto'] == $_GET['amt'] )  { /*echo "Der Brutto-Betrag ist 
  
 // http://192.168.2.106/gscheiderle/kasse/danke_seite.php?kd_nr=11516&re_nr=10167&amt=1.00&cc=EUR&cm=11516&st=Completed&tx=9LT709038U0725310
 
+		$no_error=TRUE;
       
 $betrag=$_GET['amt'];    
 
@@ -184,16 +192,16 @@ werden Ihnen auch per E-Mail zugesandt<br><br>
 
 ";
      
-?>
-		</div>
 
-	<div class="col-$md-2">
+echo "</div>
+
+	<div class='col-$md-2'>
 			</div>
 		
 		</div>
-	</div>
+	</div>"
 
- 
+?> 
 
      
 <br><br>

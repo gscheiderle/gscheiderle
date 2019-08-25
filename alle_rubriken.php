@@ -5,60 +5,52 @@ if (! isset( $_COOKIE['pseudo_kd_nr'] ) ) { setcookie("pseudo_kd_nr",$_GET['forc
 <head>
 <meta charset="utf-8">
 	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-
-<title>Ggscheiderles Rubriken</title>
-
-
+  <!-- // <META HTTP-EQUIV="REFRESH"  CONTENT="10;URL=http://192.168.2.106/gscheiderle/standartseite.php">-->
+       
+<title>Ggscheiderle einloggen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="http://use.edgefonts.net/source-sans-pro:n2,n6,n4,n3:default.js" type="text/javascript"></script>
-		
+  <script> <src="http://use.edgefonts.net/source-sans-pro:n2,n6,n4,n3:default.js" type="text/javascript"></script>	
 		
 </head>
-	
-<body>
+	<body>
 		
-<?php echo "<form method='POST' action='alle_rubriken.php'>"; ?>
-	  
+<?php  
+        
+$form="<form method='POST' action='http://192.168.2.106/gscheiderle/alle_rubriken.php?kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>";
+        
+	
+echo $form;
 
-<?php 
- 
-include("intern/mysql_connect_gscheiderle.php");
+        
+include("intern/mysql_connect_gscheiderle.php");     
 include("intern/parameter.php");
- 
+include("intern/funktionen.php"); 
+
+
 ?>		
-	
 
 	
-<?php 
-echo "<div class='container'>";		
-include("seitenelemente/header.php"); 
-echo "</div>";
-?>
-	
-		
-<br>    
-<br>	
+
+<?php include("seitenelemente/header.php"); ?>
+    
+<br>
+<br>
+
     
 <?php 
 include("seitenelemente/navigation.php"); 
+?>    
 
-?>
+<br>
+<br>
 	
 
-	
-    
-<br><br>
-	
-<div align="center">
-<table width="80%">
-<tr><td>
-	
 <?php
-include("intern/funktionen.php"); 
+
 include("php_code/array_rubriken.php");
 ?>		
 	
@@ -86,7 +78,7 @@ include("php_code/array_rubriken.php");
 												  }
 				
 											 
-					print_r("$zeile<a href='tip_auswahl.php?forcex=$zufall_id&rubrik=$key'><h3>$value ($anzahl_db)</a></h3></div>");
+					print_r("$zeile<a href='tip_auswahl.php?seiten_id=104&forcex=$zufall_id&rubrik=$key'><h3>$value ($anzahl_db)</a></h3></div>");
                     
                     $zeile="";
 
@@ -96,10 +88,7 @@ include("php_code/array_rubriken.php");
 			?>
 
 
-	</td>
-	</tr>
-	</table>	
-	
+
 
   		</div>               
 	</div>   

@@ -23,7 +23,7 @@
 		
 <?php  
         
-$form="<form method='POST' action='http://192.168.2.106/gscheiderle/einloggen.php?kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>";
+$form="<form method='POST' action='http://192.168.2.106/gscheiderle/einloggen.php?seiten_id=107&kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>";
         
 	
 echo $form;

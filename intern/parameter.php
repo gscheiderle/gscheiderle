@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 $email_match='/[^0-9][a-zA-Z0-9_-]+([.][a-zA-Z0-9_-]+)*[@][a-zA-Z0-9_-]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,6}$/';
 
@@ -22,14 +22,17 @@ function gesperrte_email($email,$post_senden)
 $mw_st=19;
 
 $sessionid=session_id();
-$browserwidth=mysqli_query($link, "select browser_width from display where session = '$sessionid' ");
+
+$browserwidth=mysqli_query($link, "select browser_width from display where session = '$sessionid' order by display_id desc limit 1 ");
 while ( $result = mysqli_fetch_array( $browserwidth, MYSQLI_BOTH ) ) {
- echo $browser_width=$resul['browser_width'];
+$browser_width=$result['browser_width'];
 }
 
 if ( $browser_width < 768 ) { $md = "sm"; }
 if ( $browser_width >= 768 && $browser_width < 992 ) { $md = "md"; }
 if ( $browser_width >= 992 && $browser_width < 1200 ) { $md = "lg"; }
 if ( $browser_width >= 1200 ) { $md = "xl"; }
+
+
 
 ?>

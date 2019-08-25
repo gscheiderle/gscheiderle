@@ -1,4 +1,5 @@
 <?php if (! isset( $_COOKIE['re_nr'] ) ) { setcookie("re_nr",$_POST['neuerenr']); } ?>
+<?php if (! isset( $_COOKIE['cart_id'] ) ) { setcookie("cart_id",$cart_id_re); } ?>
 <!doctype html>
 <html>
 <head>

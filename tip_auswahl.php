@@ -20,7 +20,7 @@ if (! isset( $_COOKIE['pseudo_kd_nr'] ) ) { setcookie("pseudo_kd_nr",$_GET['forc
 </head>
 	<body>
 		
-<?php echo " <form method='POST' action='tip_auswahl.php?rubrik=$_GET[rubrik]'> "; ?>
+<?php echo " <form method='POST' action='tip_auswahl.php?rubrik=$_GET[rubrik]&seiten_id=104'> "; ?>
 	  
 
 	
