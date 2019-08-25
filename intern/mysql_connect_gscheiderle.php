@@ -6,9 +6,10 @@
 $link=mysqli_connect("localhost","root","","gscheiderle") or die
   ("Keine Verbindung moeglich");
 
+
   
   $zeit=date("Y-m-d H:i:s");
 
- $datum=date("Y-m-d");
+  $datum=date("Y-m-d");
   
 ?>

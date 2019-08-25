@@ -38,7 +38,7 @@ include("php_code/zufallszahl.php");
 <div class="wrapper">
 	
 	
-	<?php include("seitenelemente/header.html"); ?>
+	<?php include("seitenelemente/header.php"); ?>
 	
 	
 	

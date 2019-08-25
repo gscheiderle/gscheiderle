@@ -30,13 +30,13 @@ $(document).ready(function(){
   url: "php_code/__browser_fenster_auslesen_script.php",
   method: "POST",
   /* Die Notation "variable: wert" entspricht dem Versenden mit einem Formular
-  * Heißt: Im Zielscript kann man gesendete Daten wie aus einem Formular via $_POST['name_des_tags'] entgegen nehmen
+  * Hei?t: Im Zielscript kann man gesendete Daten wie aus einem Formular via $_POST['name_des_tags'] entgegen nehmen
   */
   data: {browser: window.navigator.userAgent, width: window.innerWidth, height: window.innerHeight},
   /*
-  * Bei fehlerfreier Ausführung des Zielscripts nimmt eine Funktion Rückgaben vom Zielscript entgegen.
-  * Das können sein:
-  * - Eine Meldung über Erfolg/Mißerfolg einer Aktion
+  * Bei fehlerfreier Ausf?hrung des Zielscripts nimmt eine Funktion R?ckgaben vom Zielscript entgegen.
+  * Das k?nnen sein:
+  * - Eine Meldung ?ber Erfolg/Mi?erfolg einer Aktion
   * - Daten zur Weiterverarbeitung mit JS
   * - Eine Ausgabe einer Datenbankabfrage
   * Zur Weiterverarbeitung wird eine Funktion aufgerufen
@@ -46,11 +46,11 @@ $(document).ready(function(){
 }
 
 /*
-* Rückmeldung vom PHP-Script (oder verarbeiten)
+* R?ckmeldung vom PHP-Script (oder verarbeiten)
 */
 function msgFromScript(data){
  /*
- * Rückgaben werden i.d.R. mit json_encode kodiert
+ * R?ckgaben werden i.d.R. mit json_encode kodiert
  */
  var msg = $.parseJSON(data);
  var ausgabe = "";
@@ -78,24 +78,26 @@ getWindowMeasurements();
 
 		
 	
-<div class="container">
+
 	
 	
 	<?php 
         
+
+
+include("intern/mysql_connect_gscheiderle.php");
 include("intern/parameter.php");
 include("intern/funktionen.php"); 
-include("intern/mysql_connect_gscheiderle.php");
 include("php_code/array_rubriken.php"); 
 include("php_code/zufallszahl.php"); 
 
 ?>
 	
-	<?php include("seitenelemente/header.html"); 
+	<?php include("seitenelemente/header.php"); 
 	
 ?>
 	
-</div>
+
 
 <br>
 	
@@ -107,11 +109,11 @@ include("php_code/zufallszahl.php");
 		</h1>
 </div>
 
-<div class="container width: 100%">
+<div class="container">
 	
 <div class="row">
 		
-    <div class="col-md-7">
+   <?php echo "<div class='col-$md-7'>"; ?>
 	
 <h2 class="text-left text-primary"><font style="font-weight: 600;">Sie k&ouml;nnen sich f&uuml;r viel Geld coachen lassen. Oder: 
 seien Sie neugierig und versuchen unsere Tipps!
@@ -150,12 +152,12 @@ seien Sie neugierig und versuchen unsere Tipps!
 	</div>	
 	
 	
-	<div class="col-md-1">
+<?php echo"<div class='col-$md-1'>
 		<p></p>
 	</div>	
 
 	
-<div class="col-md-4">	
+<div class='col-$md-4'>	"; ?>
 	
 	<h2 class="text-left bg-warning text-dark"><font style="font-weight: 600;">Zu den Tipps:<br></h2>
 	<h4><br>Vorab:<br>

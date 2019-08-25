@@ -34,7 +34,7 @@ include("php_code/in_cart_speichern.php");
 ?>		
 		
 	
-<?php include("seitenelemente/header.html"); ?>
+<?php include("seitenelemente/header.php"); ?>
     
 <br>
 <br>

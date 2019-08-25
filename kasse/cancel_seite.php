@@ -15,7 +15,7 @@
   </head>
   <body>
       
-<?php include("../seitenelemente/header.html"); ?>
+<?php include("../seitenelemente/header.php"); ?>
     
 <br>
 <br>
@@ -33,10 +33,10 @@ include("../seitenelemente/navigation.php");
 		
 	<div class="row">
 	
-	   <div class="col-md-2">
+	   <div class="col-$md-2">
 			</div>
 
- 	      <div class="col-md-8">	  
+ 	      <div class="col-$md-8">	  
 	  
 <?php
           
@@ -101,7 +101,7 @@ Sie erhalten diese Nachricht auch per E-Mail !";
 	
 </div>
 
-	<div class="col-md-2">
+	<div class="col-$md-2">
 			</div>
 		
 		</div>

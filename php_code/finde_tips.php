@@ -19,10 +19,10 @@ while ( $result_tips = mysqli_fetch_array( $select_tips, MYSQLI_BOTH ) ) {
 
 if  ( $zaehler_2 % 3 == 0  ) 	{
 
-		$tabelle.="<div class='row'><div class='col-md-2'></div>";
+		$tabelle.="<div class='row'><div class='col-$md-2'></div>";
 		}
 
-	$tabelle.="<div class='col-md-4' style='background-color: $color;'><h2>".$result_tips['tip']."<br>
+	$tabelle.="<div class='col-$md-4' style='background-color: $color;'><h2>".$result_tips['tip']."<br>
     nur &euro; ".$result_tips['preis']."</h2><br>
 
     <h2>Das will ich wissen: </h2>
@@ -31,7 +31,7 @@ if  ( $zaehler_2 % 3 == 0  ) 	{
 	
 if ( $zaehler_2 % 2 == 0  ) 	{
 		
-	$tabelle.="<div class='col-md-2'></div>
+	$tabelle.="<div class='col-$md-2'></div>
 	</div>";
 }
 	

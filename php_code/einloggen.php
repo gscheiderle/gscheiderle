@@ -48,7 +48,7 @@ include("php_code/einloggen_script.php");
 <div class="wrapper">
 	
 
-	<?php include("seitenelemente/header.html"); ?>
+	<?php include("seitenelemente/header.php"); ?>
     
     <div class="nav">
     

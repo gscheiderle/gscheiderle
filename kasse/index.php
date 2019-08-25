@@ -49,7 +49,7 @@ echo $form= "<form action='index.php' method='POST'>";
 	
 <?php 
 	
-	include("../seitenelemente/header.html");
+	include("../seitenelemente/header.php");
 	
 echo "<div class='nav'>";	
 	

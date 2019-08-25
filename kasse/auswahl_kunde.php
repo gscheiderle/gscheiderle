@@ -33,7 +33,7 @@ include("../intern/funktionen.php");
 	
 <?php 
 echo "<div class='container'>";		
-include("../seitenelemente/header.html"); 
+include("../seitenelemente/header.php"); 
 echo "</div>";
 	?>
 	    

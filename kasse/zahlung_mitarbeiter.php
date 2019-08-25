@@ -49,7 +49,7 @@ $form_2="<form action='https://www.paypal.com/cgi-bin/websrc' method='POST'>";
 <div class="wrapper">
 	
 	
-<?php include("../seitenelemente/header.html"); ?>
+<?php include("../seitenelemente/header.php"); ?>
 
     
 <div class="nav">

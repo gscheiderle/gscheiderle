@@ -30,7 +30,7 @@ include("intern/funktionen.php");
 	
 ?>
 	
-	<?php include("seitenelemente/header.html"); ?>
+	<?php include("seitenelemente/header.php"); ?>
     
 <br>
 <br>
@@ -46,10 +46,10 @@ include("seitenelemente/navigation.php");
 <div class="container">
 	<div class="row">
 		
-		<div class="col-md-2"></div>
+		<div class="col-$md-2"></div>
 		
 		
-<div class="col-md-10">	
+<div class="col-$md-10">	
    
 <div align="left">
 <table border="0" style="width: 95%; height: 400px;">

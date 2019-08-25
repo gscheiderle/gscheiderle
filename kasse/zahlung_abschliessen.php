@@ -24,9 +24,9 @@
     
 
     
-include("../intern/parameter.php");
-include("../intern/mysql_connect_gscheiderle.php"); 
 
+include("../intern/mysql_connect_gscheiderle.php"); 
+include("../intern/parameter.php");
 
 
 function neuladen($db_ausdruck,$formular_ausdruck)
@@ -49,7 +49,7 @@ if ( ( $_POST['rechnung_erstellen'] == TRUE ) || ( $_POST['paypal_formular'] == 
 ?>
 
 	
-<?php include("../seitenelemente/header.html"); ?>
+<?php include("../seitenelemente/header.php"); ?>
     
 <br>
 <br>
@@ -62,14 +62,14 @@ include("../seitenelemente/navigation.php");
 <br>
 <br>
 
-<div class="container"> 
+<?php echo "<div class='container'> 
 	
-<div class="row">
+<div class='row'>
 		
-    <div class="col-md-3 ">
+    <div class='col-$md-3 '>
      </div>
     
-       <div class="col-md-6 bg-white text-info" style="text-align: center;">
+       <div class='col-$md-6 bg-white text-info' style='text-align: center;'>"; ?>
 
 <?php  
     
@@ -79,16 +79,16 @@ echo "<h1> Sie haben geordert: <br> <br></h1>";
 }
 else { echo "<h1><font style='color: red;'>Sie sind nicht eingeloggt !<br></font><br> <br></h1>"; 
 	 }   
-?>    
+    
            
-	  </div>
+	  echo "</div>
 		   
-       <div class="col-md-3 ">
+       <div class='col-$md-3'>
       </div>
 	</div>
-</div>		
+</div>";		
 
-<?php
+
 	
 $email_select=mysqli_query($link," select kd_nr, name, vorname, strasse, plz, ort, email from adressen where kd_nr = '$_COOKIE[kd_nr]' " );
 while( $result_email=mysqli_fetch_array($email_select, MYSQLI_BOTH ) ) {
@@ -103,15 +103,17 @@ $email_db=$result_email['email'];
 
 ?>
     
-
-<div class="container"> 
+<?php 
 	
-<div class="row">
+echo
+"<div class='container'> 
+	
+<div class='row'>
 		
-    <div class="col-md-2 ">
+    <div class='col-$md-2 '>
      </div>
     
-       <div class="col-md-8 bg-white text-dark" style="text-align: center;">
+       <div class='col-$md-8 bg-white text-dark' style='text-align: center;'>"; ?>
 		   
 		   <div class="table-responsive">
   
@@ -159,22 +161,23 @@ $email_db=$result_email['email'];
 echo "		   
 	  </div>
 		   
-       <div class='col-md-2'>
+       <div class='col-$md-2'>
       </div>
 	</div>
 </div>	";
 		   
 ?>		   
  
-        
-<div class="container"> 
+ <?php 
+				   
+echo "<div class='container'> 
 	
-<div class="row">
+<div class='row'>
 		
-    <div class="col-md-2 ">
+    <div class='col-$md-2'>
      </div>
     
-       <div class="col-md-8 bg-white text-dark" style="text-align: center;">
+       <div class='col-$md-8 bg-white text-dark' style='text-align: center;'>"; ?>
 
 	
 <?php
@@ -228,7 +231,7 @@ echo "</td>
 echo "		   
 	  </div>
 		   
-       <div class='col-md-3'>
+       <div class='col-$md-3'>
       </div>
 	</div>
 </div>	";		   

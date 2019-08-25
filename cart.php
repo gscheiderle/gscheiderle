@@ -23,17 +23,17 @@
 	
 <?php 
         
-
-include("intern/funktionen.php"); 
 include("intern/mysql_connect_gscheiderle.php");
-include("php_code/cart_abrufen.php"); 
+include("php_code/cart_abrufen.php");
+include("intern/funktionen.php");
+include("intern/parameter.php"); 
       
 ?>		
 		
 
 <?php 
 echo "<div class='container'>";		
-include("seitenelemente/header.html"); 
+include("seitenelemente/header.php"); 
 echo "</div>";
 ?>
     
@@ -49,14 +49,16 @@ include("seitenelemente/navigation.php");
 <br>
    
 
-<div class="container"> 
-	
-<div class="row">
+<?php 
 		
-    <div class="col-md-2 ">
+echo "<div class='container'> 
+	
+<div class='row'>
+		
+    <div class='col-$md-2'>
      </div>
     
-       <div class="col-md-8 bg-white text-dark" style="text-align: center;">
+       <div class='col-$md-8 bg-white text-dark' style='text-align: center;'>"; ?>
 		   
 		   <div class="table-responsive">
   
@@ -116,13 +118,10 @@ include("seitenelemente/navigation.php");
     
  echo "</table>";
         
-echo "		   
-	  		</div>
-			
-		   		<div class='col-md-2'>
+echo "</div>
+		<div class='col-$md-2'>
 					</div>
-					
-			</div>
+					 </div>
 		</div>
 	</div>";
                 

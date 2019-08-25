@@ -14,7 +14,7 @@ if (! isset( $_COOKIE['pseudo_kd_nr'] ) ) { setcookie("pseudo_kd_nr",$_GET['forc
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script> <src="http://use.edgefonts.net/source-sans-pro:n2,n6,n4,n3:default.js" type="text/javascript"></script>
+  <script src="http://use.edgefonts.net/source-sans-pro:n2,n6,n4,n3:default.js" type="text/javascript"></script>
 		
 		
 </head>
@@ -25,19 +25,17 @@ if (! isset( $_COOKIE['pseudo_kd_nr'] ) ) { setcookie("pseudo_kd_nr",$_GET['forc
 	  
 
 <?php 
-               
-include("intern/parameter.php");
-include("intern/funktionen.php"); 
+ 
 include("intern/mysql_connect_gscheiderle.php");
-include("php_code/array_rubriken.php"); 
-
+include("intern/parameter.php");
+ 
 ?>		
 	
 
 	
 <?php 
 echo "<div class='container'>";		
-include("seitenelemente/header.html"); 
+include("seitenelemente/header.php"); 
 echo "</div>";
 ?>
 	
@@ -49,6 +47,9 @@ echo "</div>";
 include("seitenelemente/navigation.php"); 
 
 ?>
+	
+
+	
     
 <br><br>
 	
@@ -56,7 +57,10 @@ include("seitenelemente/navigation.php");
 <table width="80%">
 <tr><td>
 	
-		
+<?php
+include("intern/funktionen.php"); 
+include("php_code/array_rubriken.php");
+?>		
 	
           <?php 
 		        
@@ -65,7 +69,7 @@ include("seitenelemente/navigation.php");
 					$zae_hler=-1;
 	
 	
-					echo "</div><div class='row'>";
+					echo "<div class='row'>";
 	
 			foreach ( $rubrik_for_frontpage_3 as $key => $value ) {
 					
@@ -74,11 +78,11 @@ include("seitenelemente/navigation.php");
 					include("php_code/rubriken_zaehlen.php");
 					
 				
-					$zeile="<div class='col-md-4 bg-white text-white' style='text-align: left;'>"; 
+					$zeile="<div class='col-$md-4 bg-white text-white' style='text-align: left;'>"; 
 				
 											  
 					if ( $zae_hler % 3 == 0 ) 	  { $zeile="</div><div class='row'>";
-						                            $zeile.="<div class='col-md-4 bg-white text-white' style='text-align: left;'>"; 
+						                            $zeile.="<div class='col-$md-4 bg-white text-white' style='text-align: left;'>"; 
 												  }
 				
 											 

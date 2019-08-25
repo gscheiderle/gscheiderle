@@ -34,13 +34,14 @@ echo $form;
      
 
 include("intern/mysql_connect_gscheiderle.php");
+include("intern/parameter.php");
 
 
 ?>		
 		
 	
 	
-<?php include("seitenelemente/header.html"); ?>
+<?php include("seitenelemente/header.php"); ?>
     
 <br>
 <br>
@@ -53,14 +54,16 @@ include("seitenelemente/navigation.php");
 <br>
 <br>
         
-<div class="container">
+<?php echo 
+	  "<div class='container'>
 	
-		<div class="row">
+		<div class='row'>
 			
-	<div class="col-md-3">
+	<div class='col-$md-3'>
 			</div>
 			
-	<div class="col-md-6 style="text-align: center;">
+	<div class='col-$md-6' style='text-align: center;'>";
+		?>
 			
 
 	   
@@ -90,11 +93,11 @@ include("seitenelemente/navigation.php");
 		
 		</div>
 		
-	<div class="col-md-3">
+	<?php echo "<div class='col-$md-3'>"; ?>
 			</div>		
 
-</div>		
-		</div>
+				</div>		
+					</div>
     
 
     

@@ -29,16 +29,16 @@ $form="<form method='POST' action='http://192.168.2.106/gscheiderle/einloggen.ph
 echo $form;
 
         
-     
+include("intern/mysql_connect_gscheiderle.php");     
 include("intern/parameter.php");
 include("intern/funktionen.php"); 
-include("intern/mysql_connect_gscheiderle.php");
+
 
 ?>		
 
 	
 
-<?php include("seitenelemente/header.html"); ?>
+<?php include("seitenelemente/header.php"); ?>
     
 <br>
 <br>
@@ -51,21 +51,21 @@ include("seitenelemente/navigation.php");
 <br>
 <br>
 
-<div class="container"> 
+<?php echo "<div class='container'> 
         
-  <div class="row">
+  <div class='row'>
 		
-    <div class="col-md-3 ">
+    <div class='col-$md-3 '>
      </div>
     
-       <div class="col-md-6 bg-white text-info" style="text-align: center;">
+       <div class='col-$md-6 bg-white text-info' style='text-align: center;'>
             <h1>E-Mail- u. Passwort-Check</h1>
 	  </div>
 		   
-       <div class="col-md-3 ">
+       <div class='col-$md-3'>
       </div>
 	</div>
-</div>
+</div>"; ?>
 		
 	  
         
@@ -80,14 +80,14 @@ include("seitenelemente/navigation.php");
         $color_2="lightgreen"; 
     }
         ?>
- <div class="container">    
+<?php echo " <div class='container'>    
 	 
-  <div class="row">
+  <div class='row'>
 		
-    <div class="col-md-1 ">
+    <div class='col-$md-1 '>
      </div>
     
-       <div class="col-md-5 bg-white text-dark" style="text-align: center;">
+       <div class='col-$md-5 bg-white text-dark' style='text-align: center;'>"; ?>
 
             <input type='text' name='email_form' value='<?php echo $_POST['email_form']; ?>' style=' height: 40px; width: 100%; background-color: <?php echo $color_2 ?>'><br><br>
             <button type='submit' name='email_check' value='email_check' style=' font-size: 24px; height: 40px; width: 100%; background-color: <?php echo $color_2 ?>'><?php echo $beschriftung_button_2; ?> </button>
@@ -109,14 +109,14 @@ include("seitenelemente/navigation.php");
     
     if ( ( $_POST['emailcheck'] == TRUE )  || (  $emailcheck == TRUE ) )  {   
 		
-	echo "<div class='col-md-5 bg-white text-dark' style='text-align: center;'>";	
+	echo "<div class='col-$md-5 bg-white text-dark' style='text-align: center;'>";	
     
     echo "<input type='password' name='pass_word' value='' style=' font-size: 24px; height: 40px; width: 100%; background-color: $color_1;'><br><br>
           <button type='submit' name='password_check' value='password_check' style=' font-size: 24px; height: 40px; width: 100%; background-color: $color_1; '>$beschriftung_button</button>";
 	echo "</div>";	
         }
 	 
-    echo "<div class='col-md-1'>
+    echo "<div class='col-$md-1'>
      	 </div>
 	 	 </div>
 	 	 </div>";
@@ -162,14 +162,14 @@ echo "
         
   <div class='row'>
 		
-    <div class='col-md-3'>
+    <div class='col-$md-3'>
      </div>
     
-       <div class='col-md-6 bg-white text-info' style='text-align: center;''>
+       <div class='col-$md-6 bg-white text-info' style='text-align: center;''>
             <h1><a href='http://192.168.2.106/gscheiderle/kasse/zahlung_abschliessen.php'><h2>Zur Kasse</a></h1>
 	  </div>
 		   
-       <div class='col-md-3'>
+       <div class='col-$md-3'>
       </div>
 	</div>
 </div> ";

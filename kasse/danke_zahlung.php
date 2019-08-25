@@ -20,7 +20,7 @@ var __adobewebfontsappname__="dreamweaver"
   <body>
       
       <div class="wrapper">
-            <?php include("../seitenelemente/header.html"); ?>
+            <?php include("../seitenelemente/header.php"); ?>
           <div class="nav">
           <?php include("../seitenelemente/navigation.php"); ?>
           </div>
