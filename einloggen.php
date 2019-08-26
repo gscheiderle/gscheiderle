@@ -46,6 +46,8 @@ include("intern/funktionen.php");
     
 <?php 
 include("seitenelemente/navigation.php"); 
+		
+		include("php_code/einloggen_script.php");
 ?>    
 
 <br>
@@ -65,7 +67,8 @@ include("seitenelemente/navigation.php");
        <div class='col-$md-3'>
       </div>
 	</div>
-</div>"; ?>
+</div>"; 
+?>
 		
 	  
         
@@ -73,13 +76,9 @@ include("seitenelemente/navigation.php");
         
     $beschriftung_button_2="E-Mail-Check";
     $color_2="#F09B9C";    
-        
-    if ( $_POST['email_check'] == TRUE ) { 
-        
-        $beschriftung_button_2="Bitte Klick wiederholen";
-        $color_2="lightgreen"; 
-    }
-        ?>
+?>
+		
+		
 <?php echo " <div class='container'>    
 	 
   <div class='row'>
@@ -89,20 +88,21 @@ include("seitenelemente/navigation.php");
     
        <div class='col-$md-5 bg-white text-dark' style='text-align: center;'>"; ?>
 
-            <input type='text' name='email_form' value='<?php echo $_POST['email_form']; ?>' style=' height: 40px; width: 100%; background-color: <?php echo $color_2 ?>'><br><br>
-            <button type='submit' name='email_check' value='email_check' style=' font-size: 24px; height: 40px; width: 100%; background-color: <?php echo $color_2 ?>'><?php echo $beschriftung_button_2; ?> </button>
-	 </div>
+            <input type='text' name='email_form' value='<?php echo $_POST['email_form']; ?>' style=' height: 40px; width: 100%; background-color: <?php echo $color ?>'><br><br>
+            <button type='submit' name='email_check' value='emailcheck' style=' font-size: 24px; height: 40px; width: 100%; background-color: <?php echo $color ?>'><?php echo $beschriftung_button_2; ?> </button>
+	
+		 </div>
 		
 		
     
  <?php 
         
- $beschriftung_button="Passwort-Check";
+ 	$beschriftung_button="Passwort-Check";
     $color_1="#F09B9C";    
         
-    if ( $_POST['password_check'] == TRUE ) { 
+    if ( $_POST['password_check'] == "passwordcheck" && $passwortcheck == TRUE) { 
          $beschriftung_button="jetzt einloggen"; 
-         $color_1="lightgreen"; 
+         $color_pw="lightgreen"; 
     }
         
        
@@ -111,8 +111,9 @@ include("seitenelemente/navigation.php");
 		
 	echo "<div class='col-$md-5 bg-white text-dark' style='text-align: center;'>";	
     
-    echo "<input type='password' name='pass_word' value='' style=' font-size: 24px; height: 40px; width: 100%; background-color: $color_1;'><br><br>
-          <button type='submit' name='password_check' value='password_check' style=' font-size: 24px; height: 40px; width: 100%; background-color: $color_1; '>$beschriftung_button</button>";
+    echo "<input type='password' name='pass_word' value='$_POST[password]' style=' font-size: 24px; height: 40px; width: 100%; background-color: $color_pw;'><br><br>
+          <button type='submit' name='password_check' value='passwordcheck' style=' font-size: 24px; height: 40px; width: 100%; background-color: $color_pw;'>"; echo $beschriftung_button; 
+	echo "</button>";
 	echo "</div>";	
         }
 	 
@@ -121,17 +122,10 @@ include("seitenelemente/navigation.php");
 	 	 </div>
 	 	 </div>";
 	 
-        include("php_code/einloggen_script.php");
-		
-		echo "<input type='hidden' name='emailcheck' value='"; echo neuladen($emailcheck, $_POST[emailcheck]); echo "'>";
-		
-        include("php_code/einloggen_script_1.php");
-		
-        
-        ?>
-        
-        
-        <?php
+?>
+     
+	
+ <?php
         
         echo "<input type='hidden' name='kd_nr_for' value='"; echo neuladen($kd_nr_db, $_POST[kd_nr_for]); echo "'>";
         echo "<input type='hidden' name='name_for' value='"; echo neuladen($name_db, $_POST[name_for]); echo "'>";
@@ -140,23 +134,19 @@ include("seitenelemente/navigation.php");
         echo "<input type='hidden' name='passwortcheck' value='"; echo neuladen($passwortcheck, $_POST[passwortcheck]); echo "'>";
 		echo "<input type='hidden' name='check' value='"; echo neuladen($check, $_POST[check] ); echo "'>"; 
      
-        ?>
+ ?>
         
-        
-        
-        <tr>
+
+		<tr>
             <td align="center" height='70px' valign='bottom'>
      
-    <?php 
+<?php 
                 
-    
-    if   ( ( $_POST['emailcheck'] == TRUE ) && ( $_POST['passwortcheck'] == TRUE ) ) 
+   if   ( ( $_POST['emailcheck'] == TRUE ) && ( $_POST['passwortcheck'] == TRUE ) ) 
         
         {
 		
-echo "		
-<br>
-<br>
+echo "<br><br>
 
 <div class='container'> 
         
@@ -164,7 +154,6 @@ echo "
 		
     <div class='col-$md-3'>
      </div>
-    
        <div class='col-$md-6 bg-white text-info' style='text-align: center;''>
             <h1><a href='http://192.168.2.106/gscheiderle/kasse/zahlung_abschliessen.php'><h2>Zur Kasse</a></h1>
 	  </div>
@@ -176,10 +165,10 @@ echo "
     
 }  
         
-    ?>
+?>
 
-    
-    	<br><br>
+		<br><br>
+				
       
 <div class="jumbotron text-center bg-secondary text-white" >
 	
@@ -188,6 +177,6 @@ echo "
 </div>
 	
 	 </form>
-	</body>
+  </body>
 </html>
 	

@@ -17,7 +17,7 @@
     
     <body>
 <?php		
-echo "<form action='danke_seite.php' method='POST'>";
+echo "<form action='danke_seite.php?seiten_id=110' method='POST'>";
          
 
 include( "../intern/mysql_connect_gscheiderle.php" );

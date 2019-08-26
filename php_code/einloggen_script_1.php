@@ -1,6 +1,11 @@
    <?php 
-   if ( ( $_POST['password_check'] == 'password_check' ) && ( $_POST['emailcheck'] == TRUE ) ) {
-       
+
+ $passwortcheck = TRUE; 
+
+   if ( ( $_POST['password_check'] == 'passwordcheck' ) && ( $_POST['emailcheck'] == TRUE ) ) {
+	   
+     
+	   
     $select_pw=mysqli_query($link,"select password from passwords where email = '$_POST[email_for]' ");
     while ($pwdb = mysqli_fetch_array($select_pw, MYSQLI_BOTH )) {
 
@@ -9,6 +14,8 @@
         
     
     $pass_word=md5($_POST['pass_word']);
+	   
+	   
      
     if ( $pass_word != $password_db ) { 
         
@@ -16,7 +23,7 @@
         
         $check=FALSE;
         $color_pw="orange";
-        $fehler_2="Etwas stimmt nicht !";
+        echo $fehler_2="<div align='center'><h3><br>Etwas stimmt hier nicht !</h3></div>";
       }
        
       if ( $pass_word == $password_db ) { 

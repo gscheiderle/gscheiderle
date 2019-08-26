@@ -6,7 +6,7 @@ if (! isset( $_COOKIE['pseudo_kd_nr'] ) ) { setcookie("pseudo_kd_nr",$_GET['forc
 <meta charset="utf-8">
 	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
    <!-- <META HTTP-EQUIV="REFRESH"  CONTENT="10;URL=http://192.168.2.106/gscheiderle/standartseite.php">-->
-<title>ä g'scheite &Uuml;bersicht</title>
+<title>ne g'scheite &Uuml;bersicht</title>
 	
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -51,7 +51,6 @@ include("seitenelemente/navigation.php");
 		
 	<div class="row">
 		
-		<?php $md="md"; ?>
 		
 	<div class=<?php echo "col-$md-2"; ?>>
 	</div>
