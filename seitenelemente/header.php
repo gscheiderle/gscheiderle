@@ -1,4 +1,5 @@
 <?php 
+echo "<div class='container'>";
 echo  "<div class='row'>
 		
     <div class='col-$md-2'>
@@ -17,6 +18,7 @@ echo  "<div class='row'>
     <div class='col-$md-2'>
      </div>
 		
+  </div>
   </div>";
 ?>
 

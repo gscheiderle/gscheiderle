@@ -133,4 +133,5 @@ echo "
     "</ul>
     </nav>
   </div>
+</div>
 </div>";

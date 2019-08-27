@@ -38,8 +38,9 @@ include("intern/funktionen.php");
 <br>
 <br>
 
-    
+ <div class="jumbotron" >   
 <?php 
+		
 include("seitenelemente/navigation.php"); 
 ?>    
 
