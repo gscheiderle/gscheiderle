@@ -11,7 +11,7 @@
 <head>
 <meta charset="utf-8">
 	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-  <!-- // <META HTTP-EQUIV="REFRESH"  CONTENT="10;URL=http://192.168.2.106/gscheiderle/standartseite.php">-->
+  <!-- // <META HTTP-EQUIV="REFRESH"  CONTENT="10;URL=https://www.gscheiderle.de/standartseite.php">-->
        
 <title>Ggscheiderles Cart</title>
 		<link rel="stylesheet" type="text/css"  media="screen and (max-width: 980px)" href="css/style_768.css"> <!-- Handy -->
@@ -27,9 +27,9 @@
 		
 <?php  
         
-/* $form="<form method='POST' action='http://192.168.2.106/gscheiderle/einloggen.php?kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>"; */
+/* $form="<form method='POST' action='https://www.gscheiderle.de/einloggen.php?kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>"; */
         
-            $form="<form method='POST' action='http://192.168.2.106/gscheiderle/einloggen.php?kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>";
+            $form="<form method='POST' action='https://www.gscheiderle.de/einloggen.php?kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>";
         
 	
 echo $form;
@@ -155,8 +155,8 @@ include("php_code/einloggen_script.php");
         {
     
          
-        // echo "<a href='http://192.168.2.106/gscheiderle/kasse/zahlung_abschliessen.php'><h1>Zur Kasse</a>";
-        echo "<a href='http://192.168.2.106/gscheiderle/kasse/zahlung_abschliessen.php'><h1>Zur Kasse</a>";
+        // echo "<a href='https://www.gscheiderle.de/kasse/zahlung_abschliessen.php'><h1>Zur Kasse</a>";
+        echo "<a href='https://www.gscheiderle.de/kasse/zahlung_abschliessen.php'><h1>Zur Kasse</a>";
         
         }  
         

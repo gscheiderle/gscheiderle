@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-  <!-- // <META HTTP-EQUIV="REFRESH"  CONTENT="10;URL=http://192.168.2.106/gscheiderle/standartseite.php">-->
+  <!-- // <META HTTP-EQUIV="REFRESH"  CONTENT="10;URL=https://www.gscheiderle.de/standartseite.php">-->
        
 <title>Ggscheiderle einloggen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,7 +23,7 @@
 		
 <?php  
         
-$form="<form method='POST' action='http://192.168.2.106/gscheiderle/einloggen.php?seiten_id=107&kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>";
+$form="<form method='POST' action='https://www.gscheiderle.de/einloggen.php?seiten_id=107&kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>";
         
 	
 echo $form;
@@ -155,7 +155,7 @@ echo "<br><br>
     <div class='col-$md-3'>
      </div>
        <div class='col-$md-6 bg-white text-info' style='text-align: center;''>
-            <h1><a href='http://192.168.2.106/gscheiderle/kasse/zahlung_abschliessen.php'><h2>Zur Kasse</a></h1>
+            <h1><a href='https://www.gscheiderle.de/kasse/zahlung_abschliessen.php'><h2>Zur Kasse</a></h1>
 	  </div>
 		   
        <div class='col-$md-3'>

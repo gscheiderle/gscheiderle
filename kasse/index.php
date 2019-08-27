@@ -78,13 +78,13 @@ echo "<h4>Bitte hier registrieren:</h4>";
     
             if ( $email_vorhanden == TRUE ) { $einloggen = FALSE; 
                                             
-                   echo "<h4><a href='http://192.168.2.106/gscheiderle/einloggen.php'><font style='color: #FFF; background-color: #E7801A;'>&nbsp;&nbsp;Passwort oder eMail ist falsch oder vorhanden&nbsp;&nbsp;</font></h4></a>";
+                   echo "<h4><a href='https://www.gscheiderle.de/einloggen.php'><font style='color: #FFF; background-color: #E7801A;'>&nbsp;&nbsp;Passwort oder eMail ist falsch oder vorhanden&nbsp;&nbsp;</font></h4></a>";
                                             }
     
             if ( $einloggen == TRUE )
                 
 			   {
-                   echo "<h4><a href='http://192.168.2.106/gscheiderle/einloggen.php'><font style='color: #FFF; background-color: #E7801A;'>&nbsp;&nbsp;Jetzt hier einloggen !&nbsp;&nbsp;</font></h4></a>";
+                   echo "<h4><a href='https://www.gscheiderle.de/einloggen.php'><font style='color: #FFF; background-color: #E7801A;'>&nbsp;&nbsp;Jetzt hier einloggen !&nbsp;&nbsp;</font></h4></a>";
                }
 	
 	

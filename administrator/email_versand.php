@@ -908,7 +908,7 @@ $_POST[beitrag]
 <td colspan=\"2\">
 
 
-<a href=\"http://192.168.2.106/gscheiderle/un_sub_scribe.php?email=$empfaenger_db&kd_nr=$kd_nr_db\">Newsletter abbestellen</a><br>
+<a href=\"https://www.gscheiderle.de/un_sub_scribe.php?email=$empfaenger_db&kd_nr=$kd_nr_db\">Newsletter abbestellen</a><br>
 Wenn der Link bei Ihnen nicht funktioniert, kopieren Sie bitte folgende Zeile<br>
 in das Adressfenster Ihres Browsers:<br>
 http://www.gscheiderle.de/un_sub_scribe.php?email=$empfaenger_db&kd_nr=$kd_nr_db

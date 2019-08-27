@@ -84,14 +84,14 @@ echo "<div class='row'>
   <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#collapsibleNavbar'> <span class='navbar-toggler-icon'></span> </button>
   <div class='collapse navbar-collapse' id='collapsibleNavbar'>
     <ul class='navbar-nav'>
-      <li class='nav-item $active_1'> <a class='nav-link' href='http://192.168.2.106/gscheiderle/index.php?seiten_id=$id_101'>$style_1 HOME</font></a> </li>
-	  <li class='nav-item $active_3'> <a class='nav-link' href='http://192.168.2.106/gscheiderle/alle_rubriken.php?seiten_id=$id_103'>$style_3 RUBRIKEN</font></a> </li>";
+      <li class='nav-item $active_1'> <a class='nav-link' href='https://www.gscheiderle.de/index.php?seiten_id=$id_101'>$style_1 HOME</font></a> </li>
+	  <li class='nav-item $active_3'> <a class='nav-link' href='https://www.gscheiderle.de/alle_rubriken.php?seiten_id=$id_103'>$style_3 RUBRIKEN</font></a> </li>";
 	  
 
 	  
 echo "
-      <li class='nav-item $active_5'> <a class='nav-link' href='http://192.168.2.106/gscheiderle/cart.php?seiten_id=$id_105'>$style_5 CART</font></a> </li>
-      <li class='nav-item $active_7'> <a class='nav-link' href='http://192.168.2.106/gscheiderle/einloggen.php?seiten_id=$id_107'>$style_7 EINLOGGEN</font></a> </li>";
+      <li class='nav-item $active_5'> <a class='nav-link' href='https://www.gscheiderle.de/cart.php?seiten_id=$id_105'>$style_5 CART</font></a> </li>
+      <li class='nav-item $active_7'> <a class='nav-link' href='https://www.gscheiderle.de/einloggen.php?seiten_id=$id_107'>$style_7 EINLOGGEN</font></a> </li>";
 	?>	
 		
     <?php
@@ -101,33 +101,33 @@ echo "
         echo "
 	
 	 <li class='nav-item $active_9'>
-      <a class='nav-link' href='http://192.168.2.106/gscheiderle/kasse/zahlung_abschliessen.php?seiten_id=$id_109'>$style_9 BEZAHLEN</font></a>
+      <a class='nav-link' href='https://www.gscheiderle.de/kasse/zahlung_abschliessen.php?seiten_id=$id_109'>$style_9 BEZAHLEN</font></a>
     </li>
 	
 	 <li class='nav-item $active_11'>
-      <a class='nav-link' href='http://192.168.2.106/gscheiderle/logout.php?seiten_id=$id_111'>$style_11 AUSLOGGEN</font></a>
+      <a class='nav-link' href='https://www.gscheiderle.de/logout.php?seiten_id=$id_111'>$style_11 AUSLOGGEN</font></a>
     </li>";
       }
    ?>
 
   <?php 
     echo "
-      <li class='nav-item $active_13'> <a class='nav-link' href='http://192.168.2.106/gscheiderle/angebot_mitarbeit.php?seiten_id=$id_113'>$style_13 EIGENE TIPPS</font></a> </li>";
+      <li class='nav-item $active_13'> <a class='nav-link' href='https://www.gscheiderle.de/angebot_mitarbeit.php?seiten_id=$id_113'>$style_13 EIGENE TIPPS</font></a> </li>";
 	  
 	  if ( $_GET['seiten_id'] == 104 ) {
-		  echo "<li class='nav-item $active_4'> <a class='nav-link' href='http://192.168.2.106/gscheiderle/tip_auswahl.php?seiten_id=$id_104'>$style_4 TIPP'S AUSW&auml;HLEN</font></a> </li>";
+		  echo "<li class='nav-item $active_4'> <a class='nav-link' href='https://www.gscheiderle.de/tip_auswahl.php?seiten_id=$id_104'>$style_4 TIPP'S AUSW&auml;HLEN</font></a> </li>";
 	  }
 
 	  if ( $_GET['seiten_id'] == 106 ) {
-		  echo "<li class='nav-item $active_6'> <a class='nav-link' href='http://192.168.2.106/gscheiderle/kasse/auswahl_kunde.php?seiten_id=$id_106'>$style_6 KUNDE-/NEU-KUNDE</font></a> </li>";
+		  echo "<li class='nav-item $active_6'> <a class='nav-link' href='https://www.gscheiderle.de/kasse/auswahl_kunde.php?seiten_id=$id_106'>$style_6 KUNDE-/NEU-KUNDE</font></a> </li>";
 	  }
 
 	  if ( $_GET['seiten_id'] == 108 ) {
-		  echo "<li class='nav-item $active_8'> <a class='nav-link' href='http://192.168.2.106/gscheiderle/kasse/index.php?seiten_id=$id_108'>$style_8 REGISTRIEREN</font></a> </li>";
+		  echo "<li class='nav-item $active_8'> <a class='nav-link' href='https://www.gscheiderle.de/kasse/index.php?seiten_id=$id_108'>$style_8 REGISTRIEREN</font></a> </li>";
 	  }
 
 	  if ( $_GET['seiten_id'] == 110 ) {
-		  echo "<li class='nav-item $active_10'> <a class='nav-link' href='http://192.168.2.106/gscheiderle/kasse/danke_seite.php?seiten_id=$id_110'>$style_10 IHRE BEST&Auml;TIGUNG</font></a> </li>";
+		  echo "<li class='nav-item $active_10'> <a class='nav-link' href='https://www.gscheiderle.de/kasse/danke_seite.php?seiten_id=$id_110'>$style_10 IHRE BEST&Auml;TIGUNG</font></a> </li>";
 	  }
 	echo   
     "</ul>

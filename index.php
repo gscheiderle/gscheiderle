@@ -1,11 +1,13 @@
-<?php setcookie("pseudo_kd_nr","");
+<?php session_start(); ?>
+<?php 
+setcookie("pseudo_kd_nr","");
 if (! isset( $_COOKIE['pseudo_kd_nr'] ) ) { setcookie("pseudo_kd_nr",$_GET['forcex']); } ?>
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-    <!--<META HTTP-EQUIV="REFRESH"  CONTENT="3;URL=http://192.168.2.106/gscheiderle">-->
+    <!--<META HTTP-EQUIV="REFRESH"  CONTENT="3;URL=https://www.gscheiderle.de">-->
 <title>Tipps von gscheiderle.de</title>
 	
         <!--<link rel="stylesheet" type="text/css"  media="screen and (max-width: 980px)" href="css/style_768.css">  Handy -->
@@ -81,9 +83,9 @@ getWindowMeasurements();
 
 	
 	
-	<?php 
-        
-
+<?php 
+	
+include("php_code/__browser_fenster_auslesen_script.php"); 	
 
 include("intern/mysql_connect_gscheiderle.php");
 include("intern/parameter.php");
@@ -91,9 +93,10 @@ include("intern/funktionen.php");
 include("php_code/array_rubriken.php"); 
 include("php_code/zufallszahl.php"); 
 
+
 ?>
 	
-	<?php include("seitenelemente/header.php"); 
+<?php include("seitenelemente/header.php"); 
 	
 ?>
 	

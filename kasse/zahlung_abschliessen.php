@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-   <!-- <META HTTP-EQUIV="REFRESH"  CONTENT="10;URL=http://192.168.2.106/gscheiderle/standartseite.php">-->
+   <!-- <META HTTP-EQUIV="REFRESH"  CONTENT="10;URL=https://www.gscheiderle.de/standartseite.php">-->
 <title>GSCHEIDERLE.DE Zahlung abschliessen</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -266,8 +266,8 @@ echo "
    <input type='hidden' name='invoice' value='$neuerenr' />
    <input type='hidden' name='cmd' value='_cart' />
    
-   <input type='hidden' name='cancel_return' value='http://192.168.2.106/gscheiderle/kasse/cancel_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />
-   <input type='hidden' name='return' value='http://192.168.2.106/gscheiderle/kasse/danke_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />
+   <input type='hidden' name='cancel_return' value='https://www.gscheiderle.de/kasse/cancel_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />
+   <input type='hidden' name='return' value='https://www.gscheiderle.de/kasse/danke_seite.php?kd_nr=$kd_nr_db&re_nr=$neuerenr' />
    
    <input type='hidden' name='rm' value='2' />
    <input type='hidden' name='tax_cart' value='$mehrwert_steuer' />

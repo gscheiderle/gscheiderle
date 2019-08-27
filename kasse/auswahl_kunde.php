@@ -58,8 +58,8 @@ include("../seitenelemente/navigation.php");
     
     <td align="leright" valign="middle">
             
-        <a href="http://192.168.2.106/gscheiderle/einloggen.php?seiten_id=107" style="text-decoration:none">
-        <img src="http://192.168.2.106/gscheiderle/images_system/knopf_gross.png" style="width:80px; height: 80px"></a></h1>
+        <a href="https://www.gscheiderle.de/einloggen.php?seiten_id=107" style="text-decoration:none">
+        <img src="https://www.gscheiderle.de/images_system/knopf_gross.png" style="width:80px; height: 80px"></a></h1>
     </td>
 </tr>
     
@@ -77,8 +77,8 @@ include("../seitenelemente/navigation.php");
     </td>
         
     <td align="left" valign="middle">
-         <a href="http://192.168.2.106/gscheiderle/kasse/index.php?seiten_id=108" style="text-decoration:none">
-         <img src="http://192.168.2.106/gscheiderle/images_system/knopf_gross.png" style="width:80px; height: 80px"></a></h1>
+         <a href="https://www.gscheiderle.de/kasse/index.php?seiten_id=108" style="text-decoration:none">
+         <img src="https://www.gscheiderle.de/images_system/knopf_gross.png" style="width:80px; height: 80px"></a></h1>
     </td>
 </tr>
     
