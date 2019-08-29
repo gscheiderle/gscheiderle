@@ -1,8 +1,8 @@
 <?php
 function neuladen($db_ausdruck,$formular_ausdruck)
   {
-  if($formular_ausdruck == ""){echo $db_ausdruck;}
-	if($formular_ausdruck != ""){echo $formular_ausdruck;}
+  if($formular_ausdruck == ""){return $db_ausdruck;}
+	if($formular_ausdruck != ""){return $formular_ausdruck;}
   
   } 
   

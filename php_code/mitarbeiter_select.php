@@ -25,7 +25,7 @@ $stoppen=mysqli_query($link,"select re_id, eigentuemer from rechnungen where pro
 	
 	
 if ( $anhalten == "" ) { echo "<h1>Es gibt nichts abzurechnen !<br>
-								   <a href='https://www.gscheiderle.de/administrator/auswahl.php'>hier geht's weiter</a></h1>";
+								   <a href='http://192.168.2.106/gscheiderle/administrator/auswahl.php'>hier geht's weiter</a></h1>";
 					    exit();
 					   
 					   }	
@@ -82,7 +82,7 @@ mysqli_query($link, "UNLOCK TABLES");
 	
 // Zeile, wie sie ausgegegeben wird
 	$zeile.="<tr><td>$adressen</td><td align='right'>$netto</td><td align='right'>$mwst</td><td align='right'>$brutto_betrag</td><td align='right'>
-	<a href='https://www.gscheiderle.de/kasse/zahlung_mitarbeiter.php?email=$email_adresse&ueberweisung=$neueuebnr' target='_blank'>$email_adresse</a></td></tr>";
+	<a href='http://192.168.2.106/gscheiderle/kasse/zahlung_mitarbeiter.php?email=$email_adresse&ueberweisung=$neueuebnr' target='_blank'>$email_adresse</a></td></tr>";
 	
 	
 	

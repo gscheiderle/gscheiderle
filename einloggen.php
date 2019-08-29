@@ -3,12 +3,15 @@
 <?php if (! isset( $_COOKIE['vorname'] ) ) { setcookie("vorname",$_POST['vorname_for']); } ?>
 <?php if (! isset( $_COOKIE['name'] ) ) { setcookie("name",$_POST['name_for']); } ?>
 <?php if (! isset( $_COOKIE['email'] ) ) { setcookie("email",$_POST['email_for']); } ?>
+<?php // setcookie("zugang",''); ?>
+<?php if (! isset( $_COOKIE['zugang'] ) ) { setcookie("zugang",$_POST['zugang']); } ?>
 <!doctype html>
+
 <html>
 <head>
 <meta charset="utf-8">
 	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-  <!-- // <META HTTP-EQUIV="REFRESH"  CONTENT="10;URL=https://www.gscheiderle.de/standartseite.php">-->
+  <!-- // <META HTTP-EQUIV="REFRESH"  CONTENT="10;URL=http://192.168.2.106/gscheiderle/standartseite.php">-->
        
 <title>Ggscheiderle einloggen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,7 +26,7 @@
 		
 <?php  
         
-$form="<form method='POST' action='https://www.gscheiderle.de/einloggen.php?seiten_id=107&kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>";
+$form="<form method='POST' action='http://192.168.2.106/gscheiderle/einloggen.php?seiten_id=107&kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>";
         
 	
 echo $form;
@@ -132,7 +135,7 @@ include("seitenelemente/navigation.php");
         echo "<input type='hidden' name='vorname_for' value='"; echo neuladen($vorname_db, $_POST[vorname_for]); echo "'>";
         echo "<input type='hidden' name='email_for' value='"; echo neuladen($email_db, $_POST[email_for]); echo "'>";
         echo "<input type='hidden' name='passwortcheck' value='"; echo neuladen($passwortcheck, $_POST[passwortcheck]); echo "'>";
-		echo "<input type='hidden' name='check' value='"; echo neuladen($check, $_POST[check] ); echo "'>"; 
+		echo "<input type='hidden' name='check' value='"; echo neuladen($check, $_POST[check] ); echo "'>";
      
  ?>
         
@@ -145,6 +148,8 @@ include("seitenelemente/navigation.php");
    if   ( ( $_POST['emailcheck'] == TRUE ) && ( $_POST['passwortcheck'] == TRUE ) ) 
         
         {
+	   
+
 		
 echo "<br><br>
 
@@ -155,7 +160,7 @@ echo "<br><br>
     <div class='col-$md-3'>
      </div>
        <div class='col-$md-6 bg-white text-info' style='text-align: center;''>
-            <h1><a href='https://www.gscheiderle.de/kasse/zahlung_abschliessen.php'><h2>Zur Kasse</a></h1>
+            <h1><a href='http://192.168.2.106/gscheiderle/kasse/zahlung_abschliessen.php?seiten_id=$id_109'><h2>Zur Kasse</a></h1>
 	  </div>
 		   
        <div class='col-$md-3'>

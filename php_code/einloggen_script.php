@@ -13,11 +13,13 @@ if ( $_POST['email_check'] == "emailcheck" )  {
 	
 	 
     
-    $select_email=mysqli_query($link,"select email from passwords where email = '$_POST[email_form]' ");
+    $select_email=mysqli_query($link,"select email, zugang from passwords where email = '$_POST[email_form]' ");
     while ($emaildb = mysqli_fetch_array($select_email, MYSQLI_BOTH )) {
         
     $email_db=$emaildb['email'];
+	$zugangdb=$emaildb['zugang'];
 }
+	
     
     if ( ( $_POST['email_form'] != $email_db ) || ( $_POST['email_form'] == "" ) ) { 
         
@@ -44,6 +46,7 @@ if ( $_POST['email_check'] == "emailcheck" )  {
 ?>
 
 <input type="hidden" name="emailcheck" value="<?php echo neuladen($emailcheck, $_POST['emailcheck']); ?>">
+
      
 <?php 
 
@@ -67,7 +70,7 @@ if ( $_POST['email_check'] == "emailcheck" )  {
         
         $check=FALSE;
         $color_pw="orange";
-        echo $fehler_2="<div align='center'><h3><br>Etwas stimmt hier nicht !</h3></div>";
+        $fehler_2="<div align='center'><h3><br>Etwas stimmt hier nicht !</h3></div>";
       }
        
       if ( $pass_word === $password_db ) { 
@@ -85,11 +88,12 @@ if ( $_POST['email_check'] == "emailcheck" )  {
             $color_pw="lightgreen";
             $passwortcheck = TRUE; 
             $check=TRUE;
-            
+             
+		  
            }
        }
-     
 
+echo "<input type='hidden' name='zugang' value='".neuladen($zugangdb,$_POST['zugang'])."'>";
 ?>
 
      

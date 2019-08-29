@@ -5,7 +5,7 @@ if (! isset( $_COOKIE['pseudo_kd_nr'] ) ) { setcookie("pseudo_kd_nr",$_GET['forc
 <head>
 <meta charset="utf-8">
 	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-   <!-- <META HTTP-EQUIV="REFRESH"  CONTENT="10;URL=https://www.gscheiderle.de/standartseite.php">-->
+   <!-- <META HTTP-EQUIV="REFRESH"  CONTENT="10;URL=http://192.168.2.106/gscheiderle/standartseite.php">-->
 <title>ne g'scheite &Uuml;bersicht</title>
 	
   <meta name="viewport" content="width=device-width, initial-scale=1">

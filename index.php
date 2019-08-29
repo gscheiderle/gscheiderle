@@ -1,18 +1,16 @@
 <?php session_start(); ?>
-<?php 
-setcookie("pseudo_kd_nr","");
+<?php if (! isset( $_COOKIE['sessionid'] ) ) { setcookie("sessionid",session_id()); }  ?>
+<?php setcookie("pseudo_kd_nr","");
 if (! isset( $_COOKIE['pseudo_kd_nr'] ) ) { setcookie("pseudo_kd_nr",$_GET['forcex']); } ?>
+<?php $sessionid=session_id(); ?>
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-    <!--<META HTTP-EQUIV="REFRESH"  CONTENT="3;URL=https://www.gscheiderle.de">-->
+    <!--<META HTTP-EQUIV="REFRESH"  CONTENT="3;URL=http://192.168.2.106/gscheiderle">-->
 <title>Tipps von gscheiderle.de</title>
-	
-        <!--<link rel="stylesheet" type="text/css"  media="screen and (max-width: 980px)" href="css/style_768.css">  Handy -->
-		<!--<link rel="stylesheet" type="text/css"  media="screen and (min-width: 981px )" href="css/style.css">  stehendes Rechteck -->
-		<!--<link rel="stylesheet" type="text/css"  media="screen and (min-width: 1300px)" href="css/style_1200.css">  grosser Bildschirm -->
+
 	
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -68,6 +66,7 @@ function msgFromScript(data){
 getWindowMeasurements();
 });
 // -->
+	
 </script>
 
 </head>
@@ -78,6 +77,13 @@ getWindowMeasurements();
 <?php echo "<form method='POST' action='index.php'>"; ?>
 	  
 
+
+<?php 
+	
+// die Variable $md wird erst eine Seite weiter befuellt	
+if ( $md == "" ) { $md = "sm"; 
+
+} ?>
 		
 	
 
@@ -85,7 +91,7 @@ getWindowMeasurements();
 	
 <?php 
 	
-include("php_code/__browser_fenster_auslesen_script.php"); 	
+// include("php_code/__browser_fenster_auslesen_script.php"); 	
 
 include("intern/mysql_connect_gscheiderle.php");
 include("intern/parameter.php");

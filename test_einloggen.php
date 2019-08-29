@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-  <!-- // <META HTTP-EQUIV="REFRESH"  CONTENT="10;URL=https://www.gscheiderle.de/standartseite.php">-->
+  <!-- // <META HTTP-EQUIV="REFRESH"  CONTENT="10;URL=http://192.168.2.106/gscheiderle/standartseite.php">-->
        
 <title>Ggscheiderle einloggen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +16,7 @@
 </head>
 	<body>
 		
-<form method='POST' action='https://www.gscheiderle.de/einloggen.php?seiten_id=107&kd_nr=&name=&vorname=&email=info@gscheiderle.de'>		
+<form method='POST' action='http://192.168.2.106/gscheiderle/einloggen.php?seiten_id=107&kd_nr=&name=&vorname=&email=info@gscheiderle.de'>		
 
 	
 
@@ -57,22 +57,22 @@
   <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#collapsibleNavbar'> <span class='navbar-toggler-icon'></span> </button>
   <div class='collapse navbar-collapse' id='collapsibleNavbar'>
     <ul class='navbar-nav'>
-      <li class='nav-item '> <a class='nav-link' href='https://www.gscheiderle.de/index.php?seiten_id=101'> HOME</font></a> </li>
-	  <li class='nav-item '> <a class='nav-link' href='https://www.gscheiderle.de/alle_rubriken.php?seiten_id=103'> RUBRIKEN</font></a> </li>
-      <li class='nav-item '> <a class='nav-link' href='https://www.gscheiderle.de/cart.php?seiten_id=105'> CART</font></a> </li>
-      <li class='nav-item active'> <a class='nav-link' href='https://www.gscheiderle.de/einloggen.php?seiten_id=107'><font style='color: yellow; font-size: 18px; weight: 700'> EINLOGGEN</font></a> </li>	
+      <li class='nav-item '> <a class='nav-link' href='http://192.168.2.106/gscheiderle/index.php?seiten_id=101'> HOME</font></a> </li>
+	  <li class='nav-item '> <a class='nav-link' href='http://192.168.2.106/gscheiderle/alle_rubriken.php?seiten_id=103'> RUBRIKEN</font></a> </li>
+      <li class='nav-item '> <a class='nav-link' href='http://192.168.2.106/gscheiderle/cart.php?seiten_id=105'> CART</font></a> </li>
+      <li class='nav-item active'> <a class='nav-link' href='http://192.168.2.106/gscheiderle/einloggen.php?seiten_id=107'><font style='color: yellow; font-size: 18px; weight: 700'> EINLOGGEN</font></a> </li>	
 		
     
 	
 	 <li class='nav-item '>
-      <a class='nav-link' href='https://www.gscheiderle.de/kasse/zahlung_abschliessen.php?seiten_id=109'> BEZAHLEN</font></a>
+      <a class='nav-link' href='http://192.168.2.106/gscheiderle/kasse/zahlung_abschliessen.php?seiten_id=109'> BEZAHLEN</font></a>
     </li>
 	
 	 <li class='nav-item '>
-      <a class='nav-link' href='https://www.gscheiderle.de/logout.php?seiten_id=111'> AUSLOGGEN</font></a>
+      <a class='nav-link' href='http://192.168.2.106/gscheiderle/logout.php?seiten_id=111'> AUSLOGGEN</font></a>
     </li>
   
-      <li class='nav-item '> <a class='nav-link' href='https://www.gscheiderle.de/angebot_mitarbeit.php?seiten_id=113'> EIGENE TIPPS</font></a> </li></ul>
+      <li class='nav-item '> <a class='nav-link' href='http://192.168.2.106/gscheiderle/angebot_mitarbeit.php?seiten_id=113'> EIGENE TIPPS</font></a> </li></ul>
     </nav>
   </div>
 </div>

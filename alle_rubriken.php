@@ -5,7 +5,7 @@ if (! isset( $_COOKIE['pseudo_kd_nr'] ) ) { setcookie("pseudo_kd_nr",$_GET['forc
 <head>
 <meta charset="utf-8">
 	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-  <!-- // <META HTTP-EQUIV="REFRESH"  CONTENT="10;URL=https://www.gscheiderle.de/standartseite.php">-->
+  <!-- // <META HTTP-EQUIV="REFRESH"  CONTENT="10;URL=http://192.168.2.106/gscheiderle/standartseite.php">-->
        
 <title>Ggscheiderle einloggen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +20,7 @@ if (! isset( $_COOKIE['pseudo_kd_nr'] ) ) { setcookie("pseudo_kd_nr",$_GET['forc
 		
 <?php  
         
-$form="<form method='POST' action='https://www.gscheiderle.de/alle_rubriken.php?kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>";
+$form="<form method='POST' action='http://192.168.2.106/gscheiderle/alle_rubriken.php?kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>";
         
 	
 echo $form;

@@ -12,11 +12,18 @@ $link=mysqli_connect("localhost","root","","gscheiderle") or die
 
   $datum=date("Y-m-d");
 
-$sessionid=session_id();
 
-$selectmd=mysqli_query($link, "select md from display where session = '$sessionid' order by display_id desc limit 1 ");
+$selectmd=mysqli_query($link, "select md from display where session = '$_COOKIE[sessionid]' order by display_id desc limit 1 ");
 while ( $result_md = mysqli_fetch_array( $selectmd, MYSQLI_BOTH ) ) {
+	
+if ( $result_md['md'] == "" ) { $md = "sm"; }
+
+else {
 $md=$result_md['md'];
 }
+	
+}
+
+
   
 ?>

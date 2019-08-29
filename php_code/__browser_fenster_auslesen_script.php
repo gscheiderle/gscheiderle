@@ -1,9 +1,9 @@
 <?php
-
+session_start();
 $link=mysqli_connect("localhost","root","","gscheiderle") or die
   ("Keine Verbindung moeglich");
 
-ini_set('error_reporting', E_ALL);
+// ini_set('error_reporting', E_ALL);
 /*
 * Die übertragenden Werte ändern sich anhand:
 * - der aktuellen Fenstergröße
@@ -12,7 +12,8 @@ ini_set('error_reporting', E_ALL);
 $browser = $_POST['browser'];
 $browser_width = $_POST['width'];
 $browser_height = $_POST['height'];
-$sessionid=session_id();
+
+echo $sessionid=session_id();
 
 if ( $browser_width < 768 ) { $md = "sm"; }
 if ( $browser_width >= 768 && $browser_width < 992 ) { $md = "md"; }
