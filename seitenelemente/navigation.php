@@ -83,14 +83,15 @@ $id_117=117;
 
 
 echo "<div class='row'>
+
 <div class='col-$md-12 bg-info text-white' style='text-align: center;'>
-  <nav class='navbar navbar-expand-md bg-dark navbar-dark'>
-  <a class='navbar-brand' href='#'>NAVIGATION</a>
-  <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#collapsibleNavbar'> <span class='navbar-toggler-icon'></span> </button>
-  <div class='collapse navbar-collapse' id='collapsibleNavbar'>
-    <ul class='navbar-nav'>
-      <li class='nav-item $active_1'> <a class='nav-link' href='http://192.168.2.106/gscheiderle/index.php?seiten_id=$id_101'>$style_1 HOME</font></a> </li>
-	  <li class='nav-item $active_3'> <a class='nav-link' href='http://192.168.2.106/gscheiderle/alle_rubriken.php?seiten_id=$id_103'>$style_3 RUBRIKEN</font></a> </li>";
+<nav class='navbar navbar-expand-md bg-dark navbar-dark'>
+	<a class='navbar-brand' href='#'>NAVIGATION</a>
+ 		<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#collapsibleNavbar'> <span class='navbar-toggler-icon'></span> </button>
+  			<div class='collapse navbar-collapse' id='collapsibleNavbar'>
+    			<ul class='navbar-nav'>
+      				<li class='nav-item $active_1'> <a class='nav-link' href='http://192.168.2.106/gscheiderle/index.php?seiten_id=$id_101'>$style_1 HOME</font></a> </li>
+	  					<li class='nav-item $active_3'> <a class='nav-link' href='http://192.168.2.106/gscheiderle/alle_rubriken.php?seiten_id=$id_103'>$style_3 RUBRIKEN</font></a> </li>";
 	  
 
 	  
@@ -103,9 +104,7 @@ echo "
 
       if ( $_COOKIE[ 'kd_nr' ] != "" && $_COOKIE[ 'name' ] != "" ) {
 
-        echo "
-	
-	 <li class='nav-item $active_9'>
+      echo "<li class='nav-item $active_9'>
       <a class='nav-link' href='http://192.168.2.106/gscheiderle/kasse/zahlung_abschliessen.php?seiten_id=$id_109'>$style_9 BEZAHLEN</font></a>
     </li>
 	
@@ -116,8 +115,7 @@ echo "
    ?>
 
   <?php 
-    echo "
-      <li class='nav-item $active_13'> <a class='nav-link' href='http://192.168.2.106/gscheiderle/angebot_mitarbeit.php?seiten_id=$id_113'>$style_13 EIGENE TIPPS</font></a> </li>";
+    echo "<li class='nav-item $active_13'> <a class='nav-link' href='http://192.168.2.106/gscheiderle/angebot_mitarbeit.php?seiten_id=$id_113'>$style_13 EIGENE TIPPS</font></a> </li>";
 	  
 	  if ( $_GET['seiten_id'] == 104 ) {
 		  echo "<li class='nav-item $active_4'> <a class='nav-link' href='http://192.168.2.106/gscheiderle/tip_auswahl.php?seiten_id=$id_104'>$style_4 TIPP'S AUSW&auml;HLEN</font></a> </li>";
@@ -139,10 +137,10 @@ echo "
 		  echo "<li class='nav-item $active_113'> <a class='nav-link' href='http://192.168.2.106/gscheiderle/administrator/index.php?seiten_id=$id_113' target='_blanc'>$style_13 ADMINISTRATOR</font></a> </li>";
 	  }
 
-	  if ( $_COOKIE['zugang'] == "Mitarbeiter" ) {
+	  if ( $_COOKIE['zugang'] == "mitarbeiter" ) {
 		  echo "<li class='nav-item $active_115'> <a class='nav-link' href='http://192.168.2.106/gscheiderle/mitarbeiter/index.php?seiten_id=$id_115' target='_blanc'>$style_15 ZUGANG MITARBEITER</font></a> </li>";
 	  }
-	echo   
+echo   
     "</ul>
     </nav>
   </div>

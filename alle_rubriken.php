@@ -102,7 +102,7 @@ include("php_code/array_rubriken.php");
 </div>
 	
 
-		   </div> 	<!-- ende div wrapper -->
+
 		</form>
 	</body>
 </html>
