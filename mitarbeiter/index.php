@@ -29,7 +29,7 @@ echo $form="<form  name=''  action='index.php' method='POST'>"; ?>
 <?PHP	
 include("../intern/mysql_connect_gscheiderle.php");
 include("../intern/parameter.php");
-include("../intern/css/schriften.css"); ?>
+?>
 	
 <?php include("seitenelemente/header.php"); ?>
     
