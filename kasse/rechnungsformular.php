@@ -69,7 +69,7 @@ echo "
 <table border=\"0\" cellpadding=\"2\" cellspacing=\"2\" width='800px'>
  <tr>
   <th colspan=\"2\" align=\"center\">
-  <img src='https://www.gscheiderle.de/images_system/gscheiderle_logo.png' alt='logo' height='70px' width='800px' >
+  <img src='http://localhost/gscheiderle/images_system/gscheiderle_logo.png' alt='logo' height='70px' width='800px' >
   </th>
  </tr>
  
