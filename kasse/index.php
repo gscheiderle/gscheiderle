@@ -9,74 +9,82 @@
 <head>
 <meta charset="utf-8">
 <title>gscheiderle.de Bezahlseite</title>
-		<link rel="stylesheet" type="text/css"  media="screen and (max-width: 980px)" href="../ckeditor/css/style_768.css"> <!-- Handy -->
-		
-		<link rel="stylesheet" type="text/css"  media="screen and (min-width: 981px )" href="../css/style_tip_cart.css"> <!-- stehendes Rechteck -->
-		
-		<link rel="stylesheet" type="text/css"  media="screen and (min-width: 1300px)" href="../css/style_1200.css"> <!-- grosser Bildschirm -->
+
 <script>
 var __adobewebfontsappname__="dreamweaver"
 </script>
 
-<!--<script src="http://use.edgefonts.net/source-sans-pro:n2,n6,n4,n3:default.js" type="text/javascript">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script> <src="http://use.edgefonts.net/source-sans-pro:n2,n6,n4,n3:default.js" type="text/javascript"></script>	
 </script>
 </head>
 
 <body>
 
 <?php 
+	
+echo $form= "<form action='index.php' method='POST'>"; 	
+	
 
 include("../intern/mysql_connect_gscheiderle.php"); 
 include("../intern/parameter.php");
-include("../intern/funktionen.php");
-include("../php_code/einloggen_script.php");
-
-
 
 $angabe = TRUE ;
 
-	
-echo $form= "<form action='index.php' method='POST'>"; 
-    
 
 ?>
 	
-    
 
-<div class="wrapper">
+<?php	
 	
-
+include("../seitenelemente/header.php"); 
+?>	
+	
+	<br> <br>
 	
 <?php 
-	
-	include("../seitenelemente/header.html");
-	
-echo "<div class='nav'>";	
-	
-	include("../seitenelemente/navigation.php");
-	
-echo "</div>";	
+include("../seitenelemente/navigation.php"); 
+?>  	
+
+	<br> <br>
 	
 	
+	<?php 
+		
+echo "<div class='container'> 
+	
+<div class='row'>
+		
+    <div class='col-$md-2'>
+     </div>
+    
+       <div class='col-$md-8 bg-light text-dark' style='text-align: left;'>"; ?>
+		   
 	
 	
-echo "<div class='article_tip_auswahl'>";
+	
+<?php	
+
 	
 
-echo "<h1>Bitte hier registrieren:</h1>";
+echo "<h4>Bitte hier registrieren:</h4>";
 	
 	
 			if ( ( $_POST['adresse_speichern'] == "adresse_speichern" )  && ( $_POST['agb_gelesen'] == TRUE ) )  { $einloggen = TRUE; }
     
             if ( $email_vorhanden == TRUE ) { $einloggen = FALSE; 
                                             
-                   echo "<h1><a href='http://localhost/gscheiderle/einloggen.php'><font style='color: #FFF; background-color: #E7801A;'>&nbsp;&nbsp;Passwort oder eMail ist falsch oder vorhanden&nbsp;&nbsp;</font></h1></a>";
+                   echo "<h4><a href='http://192.168.2.106/gscheiderle/einloggen.php'><font style='color: #FFF; background-color: #E7801A;'>&nbsp;&nbsp;Passwort oder eMail ist falsch oder vorhanden&nbsp;&nbsp;</font></h4></a>";
                                             }
     
             if ( $einloggen == TRUE )
                 
 			   {
-                   echo "<h1><a href='http://localhost/gscheiderle/einloggen.php'><font style='color: #FFF; background-color: #E7801A;'>&nbsp;&nbsp;Jetzt hier einloggen !&nbsp;&nbsp;</font></h1></a>";
+                   echo "<h4><a href='http://192.168.2.106/gscheiderle/einloggen.php'><font style='color: #FFF; background-color: #E7801A;'>&nbsp;&nbsp;Jetzt hier einloggen !&nbsp;&nbsp;</font></h4></a>";
                }
 	
 	
@@ -90,7 +98,7 @@ $passwordval=TRUE;
 $angabe= TRUE;
 
 echo " 
-<h3>
+<h4>
 ";
 
 $selected = "selected";
@@ -167,8 +175,8 @@ echo $hinweise.$hinweise_1.$hinweise_2.$hinweise_3.$hinweise_4.$hinweise_5;
 
 if ( $_POST['agb_gelesen'] == 'agb_gelesen' )	{ $checked = "checked"; }
 echo "
-<a href='../intern/agb.php?seitenid=224' target='_blanc'><h3>Die AGB's finden Sie hier</h3></a>
-<h3><input type='checkbox' $checked name='agb_gelesen' value='agb_gelesen' style='height: 25px; width:25px; background-color: red;'>&nbsp;&nbsp;Ich habe die AGBs gelesen</h3>";
+<a href='../intern/agb.php?seitenid=224' target='_blanc'><h4>Die AGB's finden Sie hier</h4></a>
+<h4><input type='checkbox' $checked name='agb_gelesen' value='agb_gelesen' style='height: 25px; width:25px; background-color: red;'>&nbsp;&nbsp;Ich habe die AGBs gelesen</h4>";
 	
 include("passwortabfrage.php");
 	
@@ -291,19 +299,32 @@ echo mysqli_errno($link,"$query");
 ?>
 	
 
-</h3>
+</h4>
+</div>
 
- 	 </div> <!-- article //--> 
+ <?php  echo "<div class='col-$md-2'>"; ?>
+     </div>
+    
 
- </div> <!-- wrapper //--> 
+
+ 	 </div>
+</div>
 
 
 
-<?php 
+<br> <br>
 
-include("../seitenelemente/footer.html");
 
-?>
+
+
+<div class="jumbotron text-center bg-secondary text-white" >
+	
+<?php include("../seitenelemente/footer.html"); ?>
+	
+</div>
+	
+
+
 
 		</form>
 	</body>

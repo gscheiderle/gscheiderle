@@ -1,6 +1,4 @@
 <?php
-
-
 $email_match='/[^0-9][a-zA-Z0-9_-]+([.][a-zA-Z0-9_-]+)*[@][a-zA-Z0-9_-]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,6}$/';
 
 
@@ -20,6 +18,8 @@ function gesperrte_email($email,$post_senden)
 
 
 $mw_st=19;
+
+
 
 
 

@@ -6,21 +6,21 @@ if (! isset( $_COOKIE['pseudo_kd_nr'] ) ) { setcookie("pseudo_kd_nr",$_GET['forc
 <meta charset="utf-8">
 	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
    <!-- <META HTTP-EQUIV="REFRESH"  CONTENT="10;URL=http://192.168.2.106/gscheiderle/standartseite.php">-->
-<title>G'scheite &Uuml;bersicht</title>
+<title>ne g'scheite &Uuml;bersicht</title>
 	
-		<link rel="stylesheet" type="text/css"  media="screen and (max-width: 980px)" href="css/style_768.css"> <!-- Handy -->
-		
-		<link rel="stylesheet" type="text/css"  media="screen and (min-width: 981px )" href="css/style_tip_cart.css"> <!-- stehendes Rechteck -->
-		
-		<link rel="stylesheet" type="text/css"  media="screen and (min-width: 1300px)" href="css/style_1200.css"> <!-- grosser Bildschirm -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="http://use.edgefonts.net/source-sans-pro:n2,n6,n4,n3:default.js" type="text/javascript"></script>	
+  <script var __adobewebfontsappname__="dreamweaver"> </script>
+  <script src="http://use.edgefonts.net/source-sans-pro:n2,n6,n4,n3:default.js" type="text/javascript"> </script>
 
-		
-		
 </head>
 	<body>
 		
-<?php echo " <form method='POST' action='tip_auswahl.php?rubrik=$_GET[rubrik]'> "; ?>
-	  
+<?php echo " <form method='POST' action='tip_auswahl.php?rubrik=$_GET[rubrik]&seiten_id=104'> "; ?>
 	  
 
 	
@@ -34,46 +34,53 @@ include("php_code/in_cart_speichern.php");
 ?>		
 		
 	
-<div class="wrapper">
-	
+<?php include("seitenelemente/header.php"); ?>
+    
+<br>
+<br>
 
+    
 <?php 
-    include("seitenelemente/header.html"); 
-    echo "<div class='nav'>";
-    include("seitenelemente/navigation.php");
+include("seitenelemente/navigation.php"); 
 ?>    
- </div>
-        
-	
-<div class="article_tip_auswahl">
 
+<br>
+<br>
 
-<table cellspacing="15px">    
-  <tbody> 
+<div class="container">
+		
+	<div class="row">
+		
+		
+	<div class=<?php echo "col-$md-2"; ?>>
+	</div>
 		
 <?php
-	  
-	  
- echo "<tr>";   
+	
+
  echo $tabelle;    
- echo "</tr>"; 	
-	   	  
 
- echo "</tbody>";
- echo "</table>";
-        
 ?>    
+	
+	
+<div class=<?php echo "col-$md-2"; ?>>
+</div>
+	
+	</div>
+</div>
 
 
-</div><!-- ende div article_tip_auswahl-->	
+<br><br>
+      
+<div class="jumbotron text-center bg-secondary text-white" >
+	
+<?php include("seitenelemente/footer.html"); ?>
+	
+</div>
 	
 	
-	<?php include("seitenelemente/footer.html"); ?>
 	
-	
-	
-		   </div> 	<!-- ende div wrapper -->
+		   
 		</form>
 	</body>
 </html>
-	

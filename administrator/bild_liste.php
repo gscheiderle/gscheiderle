@@ -91,7 +91,7 @@ $liste.="<td width='15%'><a href='$list_result[speicherort]' target='blank'><img
 else{$liste.="<td width='30%'><a href='$list_result[speicherort]' target='blank'>
 <font color='#FFFFFF'><h3>Keine Vorschau vorhanden !</a></td>";} 
 
-$liste.="<td width='35%'><font style=' color:#000; font-size: 24px;'><a href='http://localhost/gscheiderle/pictures/$list_result[datei_name]' target='_blank'>LINK zur Grafik</td>";    
+$liste.="<td width='35%'><font style=' color:#000; font-size: 24px;'><a href='http://192.168.2.106/gscheiderle/pictures/$list_result[datei_name]' target='_blank'>LINK zur Grafik</td>";    
 
 
 $namen="";

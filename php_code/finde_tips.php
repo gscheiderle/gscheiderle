@@ -2,24 +2,44 @@
 
 
  /*** selektiert die Tips's der von der Frontpage aus angewählten Rubrik */
-$zaehler=1;
+$zaehler_2=1;
+$zaehler=0;
 
-
+$color= "#D2D1F7";
 
 $select_tips=mysqli_query($link, "select tip, ru_id, rubrik, code, preis, eigentuemer from die_tips where ru_id = '$nummer_rubrik' or ru_id = '$_POST[nummer_rubrik]' " );
 while ( $result_tips = mysqli_fetch_array( $select_tips, MYSQLI_BOTH ) ) {
 	
-$tabelle.=
-    "<td width='50%'><h1>".$result_tips['tip']."<br>
-    nur &euro; ".$result_tips['preis']."</h1><br>
+	
 
-    <div class='button'>
+	
+	if ( $zaehler_2 % 2 == 0 ) { $color= "#F1C491"; }
+	if ( $zaehler_2 % 3 == 0 ) { $color= "#2FECDD"; }
+	if ( $zaehler_2 % 4 == 0 ) { $color= "#F0B1B1"; }
+
+if  ( $zaehler_2 % 3 == 0  ) 	{
+
+		$tabelle.="<div class='row'><div class='col-$md-2'></div>";
+		}
+
+	$tabelle.="<div class='col-$md-4' style='background-color: $color;'><h2>".$result_tips['tip']."<br>
+    nur &euro; ".$result_tips['preis']."</h2><br>
+
     <h2>Das will ich wissen: </h2>
     <button type='submit' name='in_cart' value='$result_tips[code]'><img src='images_system/cart.png' height='40px' width='40px' alt='cart.png'></button>
-    </div>
+	</div>";
+	
+if ( $zaehler_2 % 2 == 0  ) 	{
+		
+	$tabelle.="<div class='col-$md-2'></div>
+	</div>";
+}
+	
 
 
-</td>";
+$zaehler_2++;
+	
+$color="";	
     
 if ( $zaehler == 2 )	{ $tabelle.="</tr><tr>"; $zaehler=0; }
 
@@ -35,7 +55,6 @@ $zaehler++;
  }
 
 ?>
-
 <input type="hidden" name="code" value="<?php echo $code; ?>">
 <input type="hidden" name="tip" value="<?php echo $tip; ?>">
 <input type="hidden" name="rubrik" value="<?php echo $rubrik; ?>">

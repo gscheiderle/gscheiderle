@@ -49,7 +49,7 @@ function neuladen($db_ausdruck,$formular_ausdruck)
 <div class="wrapper">
 	
 	
-<?php include("../seitenelemente/header.html"); ?>
+<?php include("../seitenelemente/header.php"); ?>
 
     
 <div class="nav">

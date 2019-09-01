@@ -8,12 +8,18 @@
 		<link rel="stylesheet" type="text/css"  media="screen and (min-width: 981px )" href="../css/style_tip_cart.css"> <!-- stehendes Rechteck -->
 		
 		<link rel="stylesheet" type="text/css"  media="screen and (min-width: 1300px)" href="../css/style_1200.css"> <!-- grosser Bildschirm -->
+	
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="http://use.edgefonts.net/source-sans-pro:n2,n6,n4,n3:default.js" type="text/javascript"></script>
+	
 <script>
 var __adobewebfontsappname__="dreamweaver"
 </script>
 
-<!--<script src="http://use.edgefonts.net/source-sans-pro:n2,n6,n4,n3:default.js" type="text/javascript">
-</script>-->
 </head>
 
 <body>
@@ -40,21 +46,32 @@ echo $form;
 ?>
 	
 
-<div class="wrapper">
+
 	
 
 	
 <?php 
 	
-	include("../seitenelemente/header.html");
+echo "<div class='container'>";		
+include("seitenelemente/header.php"); 
+echo "</div>";
+?>
 	
-echo "<div class='nav'>";	
+		
+<br>    
+<br>	
+    
+<?php 
+include("seitenelemente/navigation.php"); 
+
+?>
 	
-	include("../seitenelemente/navigation.php");
+	</div>   
+<br><br>
 	
-echo "</div>";	
+<?php	
 	
-	
+echo "<div class='wrapper'>";
 	
 	
 echo "<div class='article_tip_auswahl'>";
@@ -268,17 +285,21 @@ values
 
 </h3>
 
- 	 </div> <!-- article //--> 
+ </div> <!-- article //--> 
 
  </div> <!-- wrapper //--> 
 
 
 
-<?php 
 
-include("../seitenelemente/footer.html");
 
-?>
+<div class="jumbotron text-center bg-secondary text-white" >
+	
+<?php include("seitenelemente/footer.html"); ?>
+	
+</div>
+
+
 
 		</form>
 	</body>

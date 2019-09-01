@@ -19,7 +19,7 @@ mysqli_query($link, "insert into paypal_transfer_infos (transaktionsnr, data) va
  
  echo "<br>
 <br>
-<a href='http://localhost/gscheiderle/gscheiderle/test_dateien/ipn_analyse.php?$data'>IPN-ANALYSE</a>";
+<a href='http://192.168.2.106/gscheiderle/gscheiderle/test_dateien/ipn_analyse.php?$data'>IPN-ANALYSE</a>";
  echo "<br>
 <br>
 ";

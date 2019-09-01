@@ -29,14 +29,11 @@ $select_cart=mysqli_query($link," select cart_id, tip_nr, tip, rubrik_nr, rubrik
          
      $cart_id=$result_cart['cart_id'];
          
-     $alle_artikel[]=("<tr><td>".$result_cart['tip_nr']."</td>
+     $alle_artikel[]=("<tr>
      <td>".$result_cart['tip']."</td>
-     <td style='text-align: center;'>".$rubrik_nr=$result_cart['rubrik_nr']."</td>
-     <td>&nbsp;|&nbsp;</td>
      <td style='text-align: left;'>".$rubrik=$result_cart['rubrik']."</td>
-     <td style='text-align: center;'>".$rubrik=$result_cart['anzahl']."</td>
-     <td style='text-align: right;'>".$preis=$result_cart['preis']."&nbsp;&nbsp;</td>
-     <td style='text-align: right;'><button type='submit' name='tip_loeschen' value='$cart_id' style='color: #FFF; background-color: $color;'>$loeschen</button></td>
+     <td style='text-align: right;'>".$preis=$result_cart['preis']."&nbsp;&nbsp;
+	 <button type='submit' name='tip_loeschen' value='$cart_id' style='color: #FFF; background-color: $color;'>$loeschen</button></td>
      </tr>");
          
          

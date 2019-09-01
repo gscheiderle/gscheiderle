@@ -5,89 +5,104 @@ if (! isset( $_COOKIE['pseudo_kd_nr'] ) ) { setcookie("pseudo_kd_nr",$_GET['forc
 <head>
 <meta charset="utf-8">
 	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-
-<title>Ggscheiderles Cart</title>
-		<link rel="stylesheet" type="text/css"  media="screen and (max-width: 980px)" href="css/style_768.css"> <!-- Handy -->
-		
-		<link rel="stylesheet" type="text/css"  media="screen and (min-width: 981px )" href="css/style_tip_cart.css"> <!-- stehendes Rechteck -->
-		
-		<link rel="stylesheet" type="text/css"  media="screen and (min-width: 1300px)" href="css/style_1200.css"> <!-- grosser Bildschirm -->
-
-		
+  <!-- // <META HTTP-EQUIV="REFRESH"  CONTENT="10;URL=http://192.168.2.106/gscheiderle/standartseite.php">-->
+       
+<title>Ggscheiderle einloggen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script> <src="http://use.edgefonts.net/source-sans-pro:n2,n6,n4,n3:default.js" type="text/javascript"></script>	
 		
 </head>
 	<body>
 		
-<?php echo "<form method='POST' action='alle_rubriken.php'>"; ?>
-	  
-	  
-
+<?php  
+        
+$form="<form method='POST' action='http://192.168.2.106/gscheiderle/alle_rubriken.php?kd_nr=$_POST[kd_nr_for]&name=$_POST[name_for]&vorname=$_POST[vorname_for]&email=$_POST[email_for]'>";
+        
 	
-<?php 
+echo $form;
+
         
-        
+include("intern/mysql_connect_gscheiderle.php");     
 include("intern/parameter.php");
 include("intern/funktionen.php"); 
-include("intern/mysql_connect_gscheiderle.php");
-include("php_code/array_rubriken.php"); 
+
 
 ?>		
-		
-	
-<div class="wrapper">
+
 	
 
-<?php include("seitenelemente/header.html"); ?>
+<?php include("seitenelemente/header.php"); ?>
     
-    <div class="nav">
-    
-<?php include("seitenelemente/navigation.php"); ?>
-    
-    </div>
-    
+<br>
+<br>
 
-    <div class="article_rubrik">
+    
+<?php 
+include("seitenelemente/navigation.php"); 
+?>    
+
+<br>
+<br>
 	
-   
-        <table>
-            
-                
-           <?php 
-                
-                $zae_hler=1;
-            
-				foreach ( $rubrik_for_frontpage_3 as $key => $value ) {
-                    
-                     include("php_code/rubriken_zaehlen.php");
-                    
-                    $zeilen_ende='';
-                    
-                    if ( $zae_hler % 2 == 0 ) { $zeilen_ende="</tr><tr>"; }
+
+<?php
+
+include("php_code/array_rubriken.php");
+?>		
+	
+          <?php 
+		        
+   			echo "<div class='container'>";	
+	
+					$zae_hler=-1;
+	
+	
+					echo "<div class='row'>";
+	
+			foreach ( $rubrik_for_frontpage_3 as $key => $value ) {
 					
-					print_r("<td hight='3em'><a href='tip_auswahl.php?forcex=$zufall_id&rubrik=$key'><font style='font-family: arial; font-color: #000; font-size: 2.5em; text-decoration: none;'>$value</a> ($anzahl_db)</font></td>".$zeilen_ende."");
-                    
-                    $zae_hler++;
-                    
-				}
+					$zae_hler++;
+					
+					include("php_code/rubriken_zaehlen.php");
+					
 				
-				?>
-             
-                
-                
-         
-            </tr> 
-    
-        </table>
-    
-    </div> <!-- ende artikel-->
+					$zeile="<div class='col-$md-4 bg-white text-white' style='text-align: left;'>"; 
+				
+											  
+					if ( $zae_hler % 3 == 0 ) 	  { $zeile="</div><div class='row'>";
+						                            $zeile.="<div class='col-$md-4 bg-white text-white' style='text-align: left;'>"; 
+												  }
+				
+											 
+					print_r("$zeile<a href='tip_auswahl.php?seiten_id=104&forcex=$zufall_id&rubrik=$key'><h3>$value ($anzahl_db)</a></h3></div>");
+                    
+                    $zeile="";
 
-    
-    
-	<?php include("seitenelemente/footer.html"); ?>
+				}
+	        
+			echo "</div>";	
+			?>
+
+
+
+
+  		</div>               
+	</div>   
 	
+	<br><br>
+      
+<div class="jumbotron text-center bg-secondary text-white" >
 	
+<?php include("seitenelemente/footer.html"); ?>
 	
-		   </div> 	<!-- ende div wrapper -->
+</div>
+	
+
+
 		</form>
 	</body>
 </html>
